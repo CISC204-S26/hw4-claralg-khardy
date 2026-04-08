@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://kb4khjfbgwd7"]
 
 [ext_resource type="Texture2D" uid="uid://bldn2lt45mk4k" path="res://Assets/Sprites/PlanksTexture.png" id="1_h2on6"]
+[ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="2_xdmeh"]
 
 [node name="DevRoom" type="Node2D" unique_id=1010922934]
 
@@ -65,3 +66,61 @@ texture = ExtResource("1_h2on6")
 position = Vector2(1207, 142)
 scale = Vector2(1.725, 1)
 texture = ExtResource("1_h2on6")
+
+[node name="Walls" type="Node" parent="." unique_id=1701604528]
+
+[node name="Wallpaper" type="Sprite2D" parent="Walls" unique_id=494906655]
+position = Vector2(101, -58)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper2" type="Sprite2D" parent="Walls" unique_id=2067046225]
+position = Vector2(301, -58)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper3" type="Sprite2D" parent="Walls" unique_id=2128199186]
+position = Vector2(501, -58)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper4" type="Sprite2D" parent="Walls" unique_id=1519520198]
+position = Vector2(701, -58)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper5" type="Sprite2D" parent="Walls" unique_id=195342343]
+position = Vector2(901, -58)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper6" type="Sprite2D" parent="Walls" unique_id=1772516346]
+position = Vector2(1101, -58)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper7" type="Sprite2D" parent="Walls" unique_id=331261376]
+position = Vector2(1301, -58)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper8" type="Sprite2D" parent="Walls" unique_id=661793716]
+position = Vector2(101, -258)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper9" type="Sprite2D" parent="Walls" unique_id=330747049]
+position = Vector2(301, -258)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper10" type="Sprite2D" parent="Walls" unique_id=563391781]
+position = Vector2(501, -258)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper11" type="Sprite2D" parent="Walls" unique_id=2060972397]
+position = Vector2(701, -258)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper12" type="Sprite2D" parent="Walls" unique_id=1270421277]
+position = Vector2(901, -258)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper13" type="Sprite2D" parent="Walls" unique_id=2034794520]
+position = Vector2(1101, -258)
+texture = ExtResource("2_xdmeh")
+
+[node name="Wallpaper14" type="Sprite2D" parent="Walls" unique_id=1818605888]
+position = Vector2(1301, -258)
+texture = ExtResource("2_xdmeh")
