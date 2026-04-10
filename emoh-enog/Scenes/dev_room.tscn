@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bldn2lt45mk4k" path="res://Assets/Sprites/PlanksTexture.png" id="1_h2on6"]
 [ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="2_xdmeh"]
+[ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="3_m3uwc"]
 
 [node name="DevRoom" type="Node2D" unique_id=1010922934]
 
@@ -124,3 +125,8 @@ texture = ExtResource("2_xdmeh")
 [node name="Wallpaper14" type="Sprite2D" parent="Walls" unique_id=1818605888]
 position = Vector2(1301, -258)
 texture = ExtResource("2_xdmeh")
+
+[node name="Player" parent="." unique_id=1095870449 instance=ExtResource("3_m3uwc")]
+z_index = 1
+position = Vector2(509, 152)
+scale = Vector2(2, 2)
