@@ -1,5 +1,53 @@
 [gd_scene format=3 uid="uid://dg6yt8jbjqcba"]
 
+[ext_resource type="Texture2D" uid="uid://cuukomwvqkhxe" path="res://Assets/Sprites/PlayStation - Suikoden 2 - Playable Characters - Eilie (1)-sheet.png" id="1_v0iea"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(25, 0, 25, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(0, 0, 25, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(25, 0, 25, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(50, 0, 25, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x3wgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvnsp")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t5aa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkybt")
+}],
+"loop": true,
+"name": &"WalkDown",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"WalkLeft",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D" unique_id=1095870449]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2064089292]
@@ -7,3 +55,7 @@
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1599621008]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=208692992]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=146082573]
+sprite_frames = SubResource("SpriteFrames_x3wgy")
+animation = &"WalkLeft"
