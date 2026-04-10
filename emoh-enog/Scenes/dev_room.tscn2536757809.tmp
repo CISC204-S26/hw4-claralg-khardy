@@ -4,10 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="2_xdmeh"]
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="3_m3uwc"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m3uwc"]
-radius = 31.5
-height = 100.0
-
 [node name="DevRoom" type="Node2D" unique_id=1010922934]
 
 [node name="Floor" type="Node" parent="." unique_id=554945035]
@@ -132,18 +128,5 @@ texture = ExtResource("2_xdmeh")
 
 [node name="Player" parent="." unique_id=1095870449 instance=ExtResource("3_m3uwc")]
 z_index = 1
-position = Vector2(504, 155)
+position = Vector2(509, 152)
 scale = Vector2(2, 2)
-
-[node name="interactionDetector" type="Area2D" parent="Player" unique_id=1661527140]
-collision_layer = 0
-collision_mask = 2
-monitorable = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/interactionDetector" unique_id=1026147621]
-position = Vector2(2, 0.5)
-shape = SubResource("CapsuleShape2D_m3uwc")
-debug_color = Color(0.87997586, 0.032227002, 0.8150601, 0.41960785)
-
-[connection signal="area_entered" from="Player/interactionDetector" to="Player" method="_on_interaction_detector_area_entered"]
-[connection signal="area_exited" from="Player/interactionDetector" to="Player" method="_on_interaction_detector_area_exited"]

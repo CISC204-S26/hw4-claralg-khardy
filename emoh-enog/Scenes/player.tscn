@@ -66,7 +66,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_gymyn")
 }],
 "loop": true,
-"name": &"IdleLeft",
+"name": &"IdleSide",
 "speed": 5.0
 }, {
 "frames": [{
@@ -108,7 +108,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_x3wgy")
 }],
 "loop": true,
-"name": &"WalkLeft",
+"name": &"WalkSide",
 "speed": 5.0
 }, {
 "frames": [{
@@ -143,7 +143,7 @@ script = ExtResource("1_cvnsp")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=146082573]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_x3wgy")
-animation = &"WalkUp"
+animation = &"IdleSide"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2064089292]
 
