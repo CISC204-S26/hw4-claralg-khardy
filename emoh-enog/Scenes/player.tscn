@@ -133,9 +133,8 @@ animations = [{
 radius = 28.0
 height = 92.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pu2lt"]
-radius = 18.0
-height = 82.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
+size = Vector2(36, 9)
 
 [node name="Player" type="CharacterBody2D" unique_id=1095870449]
 script = ExtResource("1_cvnsp")
@@ -145,12 +144,17 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_x3wgy")
 animation = &"IdleSide"
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2064089292]
+[node name="InteractionDetector" type="Area2D" parent="." unique_id=2064089292]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1599621008]
+[node name="InteractCapsule" type="CollisionShape2D" parent="InteractionDetector" unique_id=1599621008]
 position = Vector2(2, 0)
 shape = SubResource("CapsuleShape2D_gymyn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=208692992]
-position = Vector2(2, 0)
-shape = SubResource("CapsuleShape2D_pu2lt")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=2062932522]
+position = Vector2(1, 37)
+shape = SubResource("RectangleShape2D_cvnsp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=153737168]
+
+[connection signal="area_entered" from="InteractionDetector" to="." method="_on_interaction_detector_area_entered"]
+[connection signal="area_exited" from="InteractionDetector" to="." method="_on_interaction_detector_area_exited"]

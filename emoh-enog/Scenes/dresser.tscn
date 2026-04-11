@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://xljewwfx2drq"]
+
+[ext_resource type="Texture2D" uid="uid://cqmon862004nt" path="res://Assets/Sprites/Dresser.png" id="1_t1abr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0j27c"]
+size = Vector2(160, 94)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1444769464]
+
+[node name="Dresser" type="Sprite2D" parent="." unique_id=541857664]
+texture = ExtResource("1_t1abr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=634593532]
+position = Vector2(11, 10)
+shape = SubResource("RectangleShape2D_0j27c")

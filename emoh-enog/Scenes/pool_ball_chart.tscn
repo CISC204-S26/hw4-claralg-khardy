@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://loh61p28yhc8"]
+
+[ext_resource type="Texture2D" uid="uid://c5ja56r71t8md" path="res://Assets/Sprites/poolBallCrunchy.png" id="1_tw83j"]
+
+[node name="PoolBallChart" type="TextureRect" unique_id=598094310]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -532.5
+offset_top = -135.5
+offset_right = 532.5
+offset_bottom = 135.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tw83j")

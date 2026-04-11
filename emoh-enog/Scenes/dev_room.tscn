@@ -3,10 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://bldn2lt45mk4k" path="res://Assets/Sprites/PlanksTexture.png" id="1_h2on6"]
 [ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="2_xdmeh"]
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="3_m3uwc"]
+[ext_resource type="PackedScene" uid="uid://xljewwfx2drq" path="res://Scenes/dresser.tscn" id="4_88rwq"]
+[ext_resource type="Texture2D" uid="uid://mpt8olpcahuq" path="res://Assets/Sprites/pool_book.png" id="5_s3gua"]
+[ext_resource type="Script" uid="uid://brxwgti7k25ck" path="res://Scenes/pool_book.gd" id="6_upvbo"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m3uwc"]
-radius = 31.5
-height = 100.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88rwq"]
+size = Vector2(1408, 53)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_upvbo"]
+radius = 76.83171
 
 [node name="DevRoom" type="Node2D" unique_id=1010922934]
 
@@ -130,20 +135,32 @@ texture = ExtResource("2_xdmeh")
 position = Vector2(1301, -258)
 texture = ExtResource("2_xdmeh")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls" unique_id=789300344]
+position = Vector2(0, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=1865348354]
+position = Vector2(694, 16.5)
+shape = SubResource("RectangleShape2D_88rwq")
+
 [node name="Player" parent="." unique_id=1095870449 instance=ExtResource("3_m3uwc")]
-z_index = 1
+z_index = 2
 position = Vector2(504, 155)
 scale = Vector2(2, 2)
 
-[node name="interactionDetector" type="Area2D" parent="Player" unique_id=1661527140]
-collision_layer = 0
-collision_mask = 2
-monitorable = false
+[node name="Dresser" parent="." unique_id=541857664 instance=ExtResource("4_88rwq")]
+z_index = 1
+position = Vector2(124, 56)
+scale = Vector2(1.5, 1.5)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/interactionDetector" unique_id=1026147621]
-position = Vector2(2, 0.5)
-shape = SubResource("CapsuleShape2D_m3uwc")
-debug_color = Color(0.87997586, 0.032227002, 0.8150601, 0.41960785)
+[node name="PoolBook" type="Sprite2D" parent="." unique_id=80242623]
+z_index = 1
+position = Vector2(124, 57)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_s3gua")
+script = ExtResource("6_upvbo")
 
-[connection signal="area_entered" from="Player/interactionDetector" to="Player" method="_on_interaction_detector_area_entered"]
-[connection signal="area_exited" from="Player/interactionDetector" to="Player" method="_on_interaction_detector_area_exited"]
+[node name="PoolBookArea" type="Area2D" parent="PoolBook" unique_id=62818952]
+
+[node name="CircleShape" type="CollisionShape2D" parent="PoolBook/PoolBookArea" unique_id=157756205]
+position = Vector2(-36.666668, 14.666668)
+shape = SubResource("CircleShape2D_upvbo")
