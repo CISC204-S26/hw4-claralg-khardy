@@ -1,3 +1,229 @@
 [gd_scene format=3 uid="uid://cjdje7h2w7khw"]
 
+[ext_resource type="Texture2D" uid="uid://bldn2lt45mk4k" path="res://Assets/Sprites/PlanksTexture.png" id="1_j74pa"]
+[ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="2_md2ii"]
+[ext_resource type="PackedScene" uid="uid://cbxuiay41iicq" path="res://Scenes/invisible_walls.tscn" id="2_yxbpt"]
+[ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="3_yxbpt"]
+[ext_resource type="PackedScene" uid="uid://xljewwfx2drq" path="res://Scenes/dresser.tscn" id="4_vggib"]
+[ext_resource type="Texture2D" uid="uid://mpt8olpcahuq" path="res://Assets/Sprites/pool_book.png" id="5_2g8os"]
+[ext_resource type="Script" uid="uid://brxwgti7k25ck" path="res://Scripts/pool_book.gd" id="6_ucdog"]
+[ext_resource type="Texture2D" uid="uid://b1oxstfr3g30p" path="res://Assets/Sprites/ParlorLightPool.png" id="8_yxbpt"]
+[ext_resource type="Texture2D" uid="uid://udd2si1p1hvt" path="res://Assets/Sprites/ParlorLightBulb.png" id="9_2g8os"]
+[ext_resource type="Texture2D" uid="uid://djdowosbmtub" path="res://Assets/Sprites/PoolTable.png" id="9_vggib"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hrq1f"]
+radius = 76.83171
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2g8os"]
+size = Vector2(146.5, 119)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vggib"]
+size = Vector2(76, 45.5)
+
 [node name="Parlor" type="Node2D" unique_id=1663417569]
+
+[node name="Floor" type="Node" parent="." unique_id=1696479775]
+
+[node name="PlanksTexture" type="Sprite2D" parent="Floor" unique_id=196667841]
+position = Vector2(179.5, 542)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture2" type="Sprite2D" parent="Floor" unique_id=1574226437]
+position = Vector2(524, 542)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture3" type="Sprite2D" parent="Floor" unique_id=1997396878]
+position = Vector2(869, 542)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture4" type="Sprite2D" parent="Floor" unique_id=828816321]
+position = Vector2(1226.25, 542)
+scale = Vector2(1.8475004, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture5" type="Sprite2D" parent="Floor" unique_id=1831764980]
+position = Vector2(179.5, 342)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture6" type="Sprite2D" parent="Floor" unique_id=105301852]
+position = Vector2(179.99998, 142)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture7" type="Sprite2D" parent="Floor" unique_id=2088945596]
+position = Vector2(524, 342)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture8" type="Sprite2D" parent="Floor" unique_id=1123095875]
+position = Vector2(524, 142)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture9" type="Sprite2D" parent="Floor" unique_id=1448361145]
+position = Vector2(868.99994, 342)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture10" type="Sprite2D" parent="Floor" unique_id=1277847943]
+position = Vector2(868.99994, 142)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture11" type="Sprite2D" parent="Floor" unique_id=1763876278]
+position = Vector2(1225.25, 342)
+scale = Vector2(1.8375, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture12" type="Sprite2D" parent="Floor" unique_id=1225563610]
+position = Vector2(1224.75, 142)
+scale = Vector2(1.8325006, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="Walls" type="Node" parent="." unique_id=44237785]
+
+[node name="InvisibleWalls" parent="Walls" unique_id=634904761 instance=ExtResource("2_yxbpt")]
+position = Vector2(116, 27)
+
+[node name="RectShape" parent="Walls/InvisibleWalls" index="0" unique_id=1736707689]
+position = Vector2(591.5, 7.5)
+
+[node name="InvisibleWalls2" parent="Walls" unique_id=1914793346 instance=ExtResource("2_yxbpt")]
+position = Vector2(116, 638)
+
+[node name="RectShape" parent="Walls/InvisibleWalls2" index="0" unique_id=1736707689]
+position = Vector2(591.5, 7.5)
+
+[node name="InvisibleWalls3" parent="Walls" unique_id=580915979 instance=ExtResource("2_yxbpt")]
+position = Vector2(5, -405)
+rotation = 1.5707964
+
+[node name="RectShape" parent="Walls/InvisibleWalls3" index="0" unique_id=1736707689]
+position = Vector2(594, 7.500001)
+
+[node name="InvisibleWalls4" parent="Walls" unique_id=1681759924 instance=ExtResource("2_yxbpt")]
+position = Vector2(1429, -405)
+rotation = 1.5707964
+
+[node name="RectShape" parent="Walls/InvisibleWalls4" index="0" unique_id=1736707689]
+position = Vector2(594, 7.500001)
+
+[node name="Wallpaper" type="Sprite2D" parent="Walls" unique_id=1253146478]
+position = Vector2(108, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper2" type="Sprite2D" parent="Walls" unique_id=2068150026]
+position = Vector2(308, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper3" type="Sprite2D" parent="Walls" unique_id=301711459]
+position = Vector2(508, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper4" type="Sprite2D" parent="Walls" unique_id=2029557511]
+position = Vector2(708, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper5" type="Sprite2D" parent="Walls" unique_id=1654062524]
+position = Vector2(908, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper6" type="Sprite2D" parent="Walls" unique_id=2098065308]
+position = Vector2(1108, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper7" type="Sprite2D" parent="Walls" unique_id=1213984890]
+position = Vector2(1308, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper8" type="Sprite2D" parent="Walls" unique_id=1849274071]
+position = Vector2(108, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper9" type="Sprite2D" parent="Walls" unique_id=1309920368]
+position = Vector2(308, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper10" type="Sprite2D" parent="Walls" unique_id=928393076]
+position = Vector2(508, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper11" type="Sprite2D" parent="Walls" unique_id=557896031]
+position = Vector2(708, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper12" type="Sprite2D" parent="Walls" unique_id=1080482064]
+position = Vector2(908, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper13" type="Sprite2D" parent="Walls" unique_id=1029686613]
+position = Vector2(1108, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper14" type="Sprite2D" parent="Walls" unique_id=1183555096]
+position = Vector2(1308, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Player" parent="." unique_id=1095870449 instance=ExtResource("3_yxbpt")]
+z_index = 2
+position = Vector2(1313, 271)
+scale = Vector2(2, 2)
+
+[node name="Dresser" parent="." unique_id=1444769464 instance=ExtResource("4_vggib")]
+z_index = 1
+position = Vector2(131, 56)
+scale = Vector2(1.5, 1.5)
+
+[node name="PoolBook" type="Sprite2D" parent="." unique_id=1082162267]
+z_index = 1
+position = Vector2(131, 57)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_2g8os")
+script = ExtResource("6_ucdog")
+
+[node name="PoolBookArea" type="Area2D" parent="PoolBook" unique_id=897077010]
+
+[node name="CircleShape" type="CollisionShape2D" parent="PoolBook/PoolBookArea" unique_id=1712313983]
+position = Vector2(-36.666668, 14.666668)
+shape = SubResource("CircleShape2D_hrq1f")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1091592118]
+z_index = 3
+position = Vector2(718, 316)
+scale = Vector2(1.9474701, 1.3392104)
+texture = ExtResource("8_yxbpt")
+
+[node name="ParlorLightBulb" type="Sprite2D" parent="." unique_id=956139393]
+z_index = 4
+position = Vector2(732, 133)
+scale = Vector2(2, 2)
+texture = ExtResource("9_2g8os")
+
+[node name="PoolTable" type="StaticBody2D" parent="." unique_id=1160665582]
+position = Vector2(704, 277)
+scale = Vector2(2, 2)
+
+[node name="PoolTable" type="Sprite2D" parent="PoolTable" unique_id=1756652897]
+z_index = 1
+texture = ExtResource("9_vggib")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PoolTable" unique_id=2144396497]
+z_index = 1
+position = Vector2(1.75, 8.5)
+shape = SubResource("RectangleShape2D_2g8os")
+
+[node name="Area2D" type="Area2D" parent="PoolTable" unique_id=1364571859]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PoolTable/Area2D" unique_id=586831751]
+z_index = 1
+position = Vector2(-45.5, -41.25)
+shape = SubResource("RectangleShape2D_vggib")
+
+[editable path="Walls/InvisibleWalls"]
+[editable path="Walls/InvisibleWalls2"]
+[editable path="Walls/InvisibleWalls3"]
+[editable path="Walls/InvisibleWalls4"]

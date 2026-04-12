@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://kb4khjfbgwd7"]
 
+[ext_resource type="PackedScene" uid="uid://cbxuiay41iicq" path="res://Scenes/invisible_walls.tscn" id="1_1iksh"]
 [ext_resource type="Texture2D" uid="uid://bldn2lt45mk4k" path="res://Assets/Sprites/PlanksTexture.png" id="1_h2on6"]
 [ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="2_xdmeh"]
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="3_m3uwc"]
 [ext_resource type="PackedScene" uid="uid://xljewwfx2drq" path="res://Scenes/dresser.tscn" id="4_88rwq"]
 [ext_resource type="Texture2D" uid="uid://mpt8olpcahuq" path="res://Assets/Sprites/pool_book.png" id="5_s3gua"]
-[ext_resource type="Script" uid="uid://brxwgti7k25ck" path="res://Scenes/pool_book.gd" id="6_upvbo"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_88rwq"]
-size = Vector2(1408, 53)
+[ext_resource type="Script" uid="uid://brxwgti7k25ck" path="res://Scripts/pool_book.gd" id="6_upvbo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_upvbo"]
 radius = 76.83171
 
 [node name="DevRoom" type="Node2D" unique_id=1010922934]
+
+[node name="InvisibleWalls" parent="." unique_id=634904761 instance=ExtResource("1_1iksh")]
+position = Vector2(45, 25)
+scale = Vector2(1.2399981, 1)
 
 [node name="Floor" type="Node" parent="." unique_id=554945035]
 
@@ -80,67 +82,74 @@ texture = ExtResource("1_h2on6")
 [node name="Walls" type="Node" parent="." unique_id=1701604528]
 
 [node name="Wallpaper" type="Sprite2D" parent="Walls" unique_id=494906655]
+z_index = -1
 position = Vector2(101, -58)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper2" type="Sprite2D" parent="Walls" unique_id=2067046225]
+z_index = -1
 position = Vector2(301, -58)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper3" type="Sprite2D" parent="Walls" unique_id=2128199186]
+z_index = -1
 position = Vector2(501, -58)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper4" type="Sprite2D" parent="Walls" unique_id=1519520198]
+z_index = -1
 position = Vector2(701, -58)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper5" type="Sprite2D" parent="Walls" unique_id=195342343]
+z_index = -1
 position = Vector2(901, -58)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper6" type="Sprite2D" parent="Walls" unique_id=1772516346]
+z_index = -1
 position = Vector2(1101, -58)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper7" type="Sprite2D" parent="Walls" unique_id=331261376]
+z_index = -1
 position = Vector2(1301, -58)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper8" type="Sprite2D" parent="Walls" unique_id=661793716]
+z_index = -1
 position = Vector2(101, -258)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper9" type="Sprite2D" parent="Walls" unique_id=330747049]
+z_index = -1
 position = Vector2(301, -258)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper10" type="Sprite2D" parent="Walls" unique_id=563391781]
+z_index = -1
 position = Vector2(501, -258)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper11" type="Sprite2D" parent="Walls" unique_id=2060972397]
+z_index = -1
 position = Vector2(701, -258)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper12" type="Sprite2D" parent="Walls" unique_id=1270421277]
+z_index = -1
 position = Vector2(901, -258)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper13" type="Sprite2D" parent="Walls" unique_id=2034794520]
+z_index = -1
 position = Vector2(1101, -258)
 texture = ExtResource("2_xdmeh")
 
 [node name="Wallpaper14" type="Sprite2D" parent="Walls" unique_id=1818605888]
+z_index = -1
 position = Vector2(1301, -258)
 texture = ExtResource("2_xdmeh")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Walls" unique_id=789300344]
-position = Vector2(0, 13)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=1865348354]
-position = Vector2(694, 16.5)
-shape = SubResource("RectangleShape2D_88rwq")
 
 [node name="Player" parent="." unique_id=1095870449 instance=ExtResource("3_m3uwc")]
 z_index = 2
