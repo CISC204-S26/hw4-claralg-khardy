@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="3_yxbpt"]
 [ext_resource type="PackedScene" uid="uid://xljewwfx2drq" path="res://Scenes/dresser.tscn" id="4_vggib"]
 [ext_resource type="Texture2D" uid="uid://mpt8olpcahuq" path="res://Assets/Sprites/pool_book.png" id="5_2g8os"]
-[ext_resource type="Script" uid="uid://d2tjxyv607xvn" path="res://Scripts/interactable.gd" id="8_ucdog"]
+[ext_resource type="Script" uid="uid://tshyy0gapif4" path="res://Scripts/Inspectable.gd" id="8_c1wrp"]
 [ext_resource type="Texture2D" uid="uid://b1oxstfr3g30p" path="res://Assets/Sprites/ParlorLightPool.png" id="8_yxbpt"]
 [ext_resource type="Texture2D" uid="uid://udd2si1p1hvt" path="res://Assets/Sprites/ParlorLightBulb.png" id="9_2g8os"]
 [ext_resource type="Texture2D" uid="uid://djdowosbmtub" path="res://Assets/Sprites/PoolTable.png" id="9_vggib"]
@@ -204,7 +204,7 @@ scale = Vector2(1.5, 1.5)
 collision_layer = 2
 collision_mask = 0
 monitoring = false
-script = ExtResource("8_ucdog")
+script = ExtResource("8_c1wrp")
 
 [node name="CircleShape" type="CollisionShape2D" parent="Interactables/PoolBookArea" unique_id=1712313983]
 position = Vector2(-36.666668, 14.666668)
@@ -220,7 +220,7 @@ scale = Vector2(2, 2)
 collision_layer = 2
 collision_mask = 0
 monitoring = false
-script = ExtResource("8_ucdog")
+script = ExtResource("8_c1wrp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/PoolTableArea" unique_id=586831751]
 z_index = 1
@@ -244,7 +244,7 @@ position = Vector2(1226, -85)
 collision_layer = 2
 collision_mask = 0
 monitoring = false
-script = ExtResource("8_ucdog")
+script = ExtResource("8_c1wrp")
 
 [node name="JellySafe" type="Sprite2D" parent="Interactables/SafeArea" unique_id=694187072]
 z_index = 1

@@ -146,6 +146,8 @@ sprite_frames = SubResource("SpriteFrames_x3wgy")
 animation = &"IdleSide"
 
 [node name="InteractionDetector" type="Area2D" parent="." unique_id=2064089292]
+collision_layer = 0
+collision_mask = 2
 
 [node name="InteractCapsule" type="CollisionShape2D" parent="InteractionDetector" unique_id=1599621008]
 position = Vector2(2, 0)
