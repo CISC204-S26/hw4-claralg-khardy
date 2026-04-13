@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="3_m3uwc"]
 [ext_resource type="PackedScene" uid="uid://xljewwfx2drq" path="res://Scenes/dresser.tscn" id="4_88rwq"]
 [ext_resource type="Texture2D" uid="uid://mpt8olpcahuq" path="res://Assets/Sprites/pool_book.png" id="5_s3gua"]
-[ext_resource type="Script" uid="uid://brxwgti7k25ck" path="res://Scripts/pool_book.gd" id="6_upvbo"]
+[ext_resource type="Script" uid="uid://tshyy0gapif4" path="res://Scripts/Inspectable.gd" id="6_upvbo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_upvbo"]
 radius = 76.83171
