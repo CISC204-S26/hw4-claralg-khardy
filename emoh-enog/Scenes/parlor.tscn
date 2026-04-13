@@ -221,6 +221,7 @@ collision_layer = 2
 collision_mask = 0
 monitoring = false
 script = ExtResource("8_c1wrp")
+has_image = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/PoolTableArea" unique_id=586831751]
 z_index = 1
@@ -245,6 +246,7 @@ collision_layer = 2
 collision_mask = 0
 monitoring = false
 script = ExtResource("8_c1wrp")
+description = "A safe... I don't have the combination..."
 
 [node name="JellySafe" type="Sprite2D" parent="Interactables/SafeArea" unique_id=694187072]
 z_index = 1
