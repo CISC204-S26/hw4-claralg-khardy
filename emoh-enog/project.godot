@@ -50,7 +50,7 @@ interact={
 
 [layer_names]
 
-2d_physics/layer_2="Interactables"
+2d_physics/layer_2="Interactable"
 
 [physics]
 

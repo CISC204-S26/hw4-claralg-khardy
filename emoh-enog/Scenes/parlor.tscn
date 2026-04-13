@@ -6,9 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="3_yxbpt"]
 [ext_resource type="PackedScene" uid="uid://xljewwfx2drq" path="res://Scenes/dresser.tscn" id="4_vggib"]
 [ext_resource type="Texture2D" uid="uid://mpt8olpcahuq" path="res://Assets/Sprites/pool_book.png" id="5_2g8os"]
+[ext_resource type="Script" uid="uid://d2tjxyv607xvn" path="res://Scripts/interactable.gd" id="8_ucdog"]
 [ext_resource type="Texture2D" uid="uid://b1oxstfr3g30p" path="res://Assets/Sprites/ParlorLightPool.png" id="8_yxbpt"]
 [ext_resource type="Texture2D" uid="uid://udd2si1p1hvt" path="res://Assets/Sprites/ParlorLightBulb.png" id="9_2g8os"]
 [ext_resource type="Texture2D" uid="uid://djdowosbmtub" path="res://Assets/Sprites/PoolTable.png" id="9_vggib"]
+[ext_resource type="Texture2D" uid="uid://bn2ekgx2kxxm2" path="res://Assets/Sprites/JellySafe.png" id="10_2g8os"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hrq1f"]
 radius = 76.83171
@@ -18,6 +20,9 @@ size = Vector2(76, 45.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2g8os"]
 size = Vector2(146.5, 119)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucdog"]
+size = Vector2(147, 250)
 
 [node name="Parlor" type="Node2D" unique_id=1663417569]
 
@@ -86,13 +91,15 @@ texture = ExtResource("1_j74pa")
 [node name="Walls" type="Node" parent="." unique_id=44237785]
 
 [node name="InvisibleWalls" parent="Walls" unique_id=634904761 instance=ExtResource("2_yxbpt")]
-position = Vector2(116, 27)
+position = Vector2(-108, 27)
+scale = Vector2(1.4799988, 1)
 
 [node name="RectShape" parent="Walls/InvisibleWalls" index="0" unique_id=1736707689]
-position = Vector2(591.5, 7.5)
+position = Vector2(568, 7.5)
 
 [node name="InvisibleWalls2" parent="Walls" unique_id=1914793346 instance=ExtResource("2_yxbpt")]
-position = Vector2(116, 638)
+position = Vector2(-71.999985, 638)
+scale = Vector2(1.2799994, 1)
 
 [node name="RectShape" parent="Walls/InvisibleWalls2" index="0" unique_id=1736707689]
 position = Vector2(591.5, 7.5)
@@ -177,21 +184,6 @@ z_index = 1
 position = Vector2(131, 56)
 scale = Vector2(1.5, 1.5)
 
-[node name="PoolBookArea" type="Area2D" parent="." unique_id=897077010]
-position = Vector2(131, 57)
-scale = Vector2(1.5, 1.5)
-collision_layer = 4
-collision_mask = 0
-monitoring = false
-
-[node name="CircleShape" type="CollisionShape2D" parent="PoolBookArea" unique_id=1712313983]
-position = Vector2(-36.666668, 14.666668)
-shape = SubResource("CircleShape2D_hrq1f")
-
-[node name="PoolBook" type="Sprite2D" parent="PoolBookArea" unique_id=1082162267]
-z_index = 1
-texture = ExtResource("5_2g8os")
-
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1091592118]
 z_index = 3
 position = Vector2(718, 316)
@@ -204,28 +196,63 @@ position = Vector2(732, 133)
 scale = Vector2(2, 2)
 texture = ExtResource("9_2g8os")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1364571859]
+[node name="Interactables" type="Node" parent="." unique_id=884705693]
+
+[node name="PoolBookArea" type="Area2D" parent="Interactables" unique_id=897077010]
+position = Vector2(131, 57)
+scale = Vector2(1.5, 1.5)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+script = ExtResource("8_ucdog")
+
+[node name="CircleShape" type="CollisionShape2D" parent="Interactables/PoolBookArea" unique_id=1712313983]
+position = Vector2(-36.666668, 14.666668)
+shape = SubResource("CircleShape2D_hrq1f")
+
+[node name="PoolBook" type="Sprite2D" parent="Interactables/PoolBookArea" unique_id=1082162267]
+z_index = 1
+texture = ExtResource("5_2g8os")
+
+[node name="PoolTableArea" type="Area2D" parent="Interactables" unique_id=1364571859]
 position = Vector2(704, 277)
 scale = Vector2(2, 2)
 collision_layer = 2
 collision_mask = 0
 monitoring = false
+script = ExtResource("8_ucdog")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=586831751]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/PoolTableArea" unique_id=586831751]
 z_index = 1
 position = Vector2(-45.5, -41.25)
 shape = SubResource("RectangleShape2D_vggib")
 
-[node name="PoolTable" type="StaticBody2D" parent="Area2D" unique_id=1160665582]
+[node name="PoolTable" type="StaticBody2D" parent="Interactables/PoolTableArea" unique_id=1160665582]
 
-[node name="PoolTable" type="Sprite2D" parent="Area2D/PoolTable" unique_id=1756652897]
+[node name="PoolTable" type="Sprite2D" parent="Interactables/PoolTableArea/PoolTable" unique_id=1756652897]
 z_index = 1
 texture = ExtResource("9_vggib")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/PoolTable" unique_id=2144396497]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/PoolTableArea/PoolTable" unique_id=2144396497]
 z_index = 1
 position = Vector2(1.75, 8.5)
 shape = SubResource("RectangleShape2D_2g8os")
+
+[node name="SafeArea" type="Area2D" parent="Interactables" unique_id=1829177941]
+z_index = 1
+position = Vector2(1226, -85)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+script = ExtResource("8_ucdog")
+
+[node name="JellySafe" type="Sprite2D" parent="Interactables/SafeArea" unique_id=694187072]
+z_index = 1
+texture = ExtResource("10_2g8os")
+
+[node name="SafeRect" type="CollisionShape2D" parent="Interactables/SafeArea" unique_id=1186203845]
+position = Vector2(2.5, 55)
+shape = SubResource("RectangleShape2D_ucdog")
 
 [editable path="Walls/InvisibleWalls"]
 [editable path="Walls/InvisibleWalls2"]
