@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="3_yxbpt"]
 [ext_resource type="PackedScene" uid="uid://xljewwfx2drq" path="res://Scenes/dresser.tscn" id="4_vggib"]
 [ext_resource type="Texture2D" uid="uid://mpt8olpcahuq" path="res://Assets/Sprites/pool_book.png" id="5_2g8os"]
-[ext_resource type="Script" uid="uid://brxwgti7k25ck" path="res://Scripts/pool_book.gd" id="6_ucdog"]
 [ext_resource type="Texture2D" uid="uid://b1oxstfr3g30p" path="res://Assets/Sprites/ParlorLightPool.png" id="8_yxbpt"]
 [ext_resource type="Texture2D" uid="uid://udd2si1p1hvt" path="res://Assets/Sprites/ParlorLightBulb.png" id="9_2g8os"]
 [ext_resource type="Texture2D" uid="uid://djdowosbmtub" path="res://Assets/Sprites/PoolTable.png" id="9_vggib"]
@@ -14,11 +13,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_hrq1f"]
 radius = 76.83171
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2g8os"]
-size = Vector2(146.5, 119)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vggib"]
 size = Vector2(76, 45.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2g8os"]
+size = Vector2(146.5, 119)
 
 [node name="Parlor" type="Node2D" unique_id=1663417569]
 
@@ -178,18 +177,20 @@ z_index = 1
 position = Vector2(131, 56)
 scale = Vector2(1.5, 1.5)
 
-[node name="PoolBook" type="Sprite2D" parent="." unique_id=1082162267]
-z_index = 1
+[node name="PoolBookArea" type="Area2D" parent="." unique_id=897077010]
 position = Vector2(131, 57)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("5_2g8os")
-script = ExtResource("6_ucdog")
+collision_layer = 4
+collision_mask = 0
+monitoring = false
 
-[node name="PoolBookArea" type="Area2D" parent="PoolBook" unique_id=897077010]
-
-[node name="CircleShape" type="CollisionShape2D" parent="PoolBook/PoolBookArea" unique_id=1712313983]
+[node name="CircleShape" type="CollisionShape2D" parent="PoolBookArea" unique_id=1712313983]
 position = Vector2(-36.666668, 14.666668)
 shape = SubResource("CircleShape2D_hrq1f")
+
+[node name="PoolBook" type="Sprite2D" parent="PoolBookArea" unique_id=1082162267]
+z_index = 1
+texture = ExtResource("5_2g8os")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1091592118]
 z_index = 3
@@ -203,25 +204,28 @@ position = Vector2(732, 133)
 scale = Vector2(2, 2)
 texture = ExtResource("9_2g8os")
 
-[node name="PoolTable" type="StaticBody2D" parent="." unique_id=1160665582]
+[node name="Area2D" type="Area2D" parent="." unique_id=1364571859]
 position = Vector2(704, 277)
 scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
 
-[node name="PoolTable" type="Sprite2D" parent="PoolTable" unique_id=1756652897]
-z_index = 1
-texture = ExtResource("9_vggib")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PoolTable" unique_id=2144396497]
-z_index = 1
-position = Vector2(1.75, 8.5)
-shape = SubResource("RectangleShape2D_2g8os")
-
-[node name="Area2D" type="Area2D" parent="PoolTable" unique_id=1364571859]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PoolTable/Area2D" unique_id=586831751]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=586831751]
 z_index = 1
 position = Vector2(-45.5, -41.25)
 shape = SubResource("RectangleShape2D_vggib")
+
+[node name="PoolTable" type="StaticBody2D" parent="Area2D" unique_id=1160665582]
+
+[node name="PoolTable" type="Sprite2D" parent="Area2D/PoolTable" unique_id=1756652897]
+z_index = 1
+texture = ExtResource("9_vggib")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/PoolTable" unique_id=2144396497]
+z_index = 1
+position = Vector2(1.75, 8.5)
+shape = SubResource("RectangleShape2D_2g8os")
 
 [editable path="Walls/InvisibleWalls"]
 [editable path="Walls/InvisibleWalls2"]
