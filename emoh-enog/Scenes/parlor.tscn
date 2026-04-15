@@ -205,13 +205,15 @@ collision_layer = 2
 collision_mask = 0
 monitoring = false
 script = ExtResource("8_c1wrp")
+description = "A beginner's guide to pool... there's a chart inside..."
+has_image = true
 
 [node name="CircleShape" type="CollisionShape2D" parent="Interactables/PoolBookArea" unique_id=1712313983]
 position = Vector2(-36.666668, 14.666668)
 shape = SubResource("CircleShape2D_hrq1f")
 
 [node name="PoolBook" type="Sprite2D" parent="Interactables/PoolBookArea" unique_id=1082162267]
-z_index = 1
+z_index = 2
 texture = ExtResource("5_2g8os")
 
 [node name="PoolTableArea" type="Area2D" parent="Interactables" unique_id=1364571859]
@@ -221,6 +223,7 @@ collision_layer = 2
 collision_mask = 0
 monitoring = false
 script = ExtResource("8_c1wrp")
+description = "Looks like this game has been waiting for some time, there's dust all over the table. There's a cluster at this corner... the green number is scratched out..."
 has_image = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/PoolTableArea" unique_id=586831751]
