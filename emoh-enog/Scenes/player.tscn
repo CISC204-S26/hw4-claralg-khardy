@@ -139,6 +139,27 @@ size = Vector2(36, 9)
 [node name="Player" type="CharacterBody2D" unique_id=1095870449]
 script = ExtResource("1_cvnsp")
 
+[node name="TextBox" type="CanvasLayer" parent="." unique_id=1858592954]
+
+[node name="TextBoxColor" type="ColorRect" parent="TextBox" unique_id=1013595673]
+offset_left = -80.99999
+offset_top = -44.999996
+offset_right = -40.999992
+offset_bottom = -4.999996
+scale = Vector2(4.214723, 2.0121946)
+color = Color(0.32941177, 0.32941177, 0.32941177, 0.8666667)
+
+[node name="Dialogue" type="RichTextLabel" parent="TextBox/TextBoxColor" unique_id=658140253]
+layout_mode = 0
+offset_left = 1.1863155
+offset_top = 2.484846
+offset_right = 158.18631
+offset_bottom = 72.48485
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=146082573]
 z_index = 2
 scale = Vector2(2, 2)
@@ -156,8 +177,6 @@ shape = SubResource("CapsuleShape2D_gymyn")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=2062932522]
 position = Vector2(1, 37)
 shape = SubResource("RectangleShape2D_cvnsp")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=153737168]
 
 [connection signal="area_entered" from="InteractionDetector" to="." method="_on_interaction_detector_area_entered"]
 [connection signal="area_exited" from="InteractionDetector" to="." method="_on_interaction_detector_area_exited"]

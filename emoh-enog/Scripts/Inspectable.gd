@@ -15,3 +15,5 @@ func _process(delta: float) -> void:
 
 func interact():
 	print(description)
+	
+		

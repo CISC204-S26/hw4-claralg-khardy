@@ -17,3 +17,8 @@ func _process(delta: float) -> void:
 
 func interact():
 	push_warning("this interactable has no interact() code yet!")
+	if interaction_name == "PoolBook":
+		$Player/TextBox/TextBoxColor.show()
+		$Player/TextBox/TextBoxColor/Dialogue.text = ""
+		$Player/TextBox/TextBoxColor/Dialogue.text = "There's a beginner's guide to pool here..."
+		

@@ -35,23 +35,6 @@ size = Vector2(63, 143)
 
 [node name="Parlor" type="Node2D" unique_id=1663417569]
 
-[node name="Player" parent="." unique_id=1095870449 instance=ExtResource("3_yxbpt")]
-position = Vector2(1316, 268)
-scale = Vector2(2, 2)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1529201488]
-
-[node name="ColorRect" type="ColorRect" parent="Player/Camera2D" unique_id=873705828]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-color = Color(0.31764707, 0.31764707, 0.31764707, 0.7372549)
-
 [node name="Floor" type="Node" parent="." unique_id=1696479775]
 
 [node name="PlanksTexture" type="Sprite2D" parent="Floor" unique_id=196667841]
@@ -200,6 +183,11 @@ texture = ExtResource("2_md2ii")
 position = Vector2(1308, -258)
 texture = ExtResource("2_md2ii")
 
+[node name="Player" parent="." unique_id=1095870449 instance=ExtResource("3_yxbpt")]
+z_index = 2
+position = Vector2(1313, 271)
+scale = Vector2(2, 2)
+
 [node name="Dresser" parent="." unique_id=1444769464 instance=ExtResource("4_vggib")]
 z_index = 1
 position = Vector2(131, 56)
@@ -328,3 +316,4 @@ shape = SubResource("RectangleShape2D_c1wrp")
 [editable path="Walls/InvisibleWalls2"]
 [editable path="Walls/InvisibleWalls3"]
 [editable path="Walls/InvisibleWalls4"]
+[editable path="Player"]

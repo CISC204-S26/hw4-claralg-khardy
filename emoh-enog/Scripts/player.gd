@@ -9,6 +9,7 @@ const JUMP_VELOCITY = -400.0
 ## Will eventually hold an array 
 
 func _physics_process(delta: float):
+	$TextBox/TextBoxColor.hide()
 	## Add the gravity.
 	#if not is_on_floor():
 		#velocity += get_gravity() * delta
