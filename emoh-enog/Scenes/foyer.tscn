@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://cpuwsfb1de6ae"]
+
+[ext_resource type="Texture2D" uid="uid://cqmon862004nt" path="res://Assets/Sprites/Dresser.png" id="1_6dvja"]
+[ext_resource type="Texture2D" uid="uid://bldn2lt45mk4k" path="res://Assets/Sprites/PlanksTexture.png" id="1_p4inb"]
+[ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="2_u7b4r"]
+
+[node name="Foyer" type="Node2D" unique_id=971780771]
+
+[node name="Dresser" type="Sprite2D" parent="." unique_id=1683208073]
+z_index = 1
+position = Vector2(330, 72)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_6dvja")
+
+[node name="Dresser2" type="Sprite2D" parent="." unique_id=923516670]
+z_index = 1
+position = Vector2(1246, 72)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_6dvja")
+
+[node name="Floors" type="Node" parent="." unique_id=1467163015]
+
+[node name="PlanksTexture2" type="Sprite2D" parent="Floors" unique_id=1430661348]
+position = Vector2(300, 547)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture3" type="Sprite2D" parent="Floors" unique_id=880235039]
+position = Vector2(500, 547)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture4" type="Sprite2D" parent="Floors" unique_id=1362511919]
+position = Vector2(700, 547)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture6" type="Sprite2D" parent="Floors" unique_id=682556506]
+position = Vector2(700, 547)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture7" type="Sprite2D" parent="Floors" unique_id=829155776]
+position = Vector2(900, 547)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture8" type="Sprite2D" parent="Floors" unique_id=1597598963]
+position = Vector2(1100, 547)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture9" type="Sprite2D" parent="Floors" unique_id=162761626]
+position = Vector2(1300, 547)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture11" type="Sprite2D" parent="Floors" unique_id=765904207]
+position = Vector2(300, 347)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture12" type="Sprite2D" parent="Floors" unique_id=1840719394]
+position = Vector2(500, 347)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture13" type="Sprite2D" parent="Floors" unique_id=265351311]
+position = Vector2(700, 347)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture14" type="Sprite2D" parent="Floors" unique_id=1323500995]
+position = Vector2(700, 347)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture15" type="Sprite2D" parent="Floors" unique_id=1944199086]
+position = Vector2(900, 347)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture16" type="Sprite2D" parent="Floors" unique_id=386358467]
+position = Vector2(1100, 347)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture17" type="Sprite2D" parent="Floors" unique_id=297253476]
+position = Vector2(1300, 347)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture18" type="Sprite2D" parent="Floors" unique_id=1680824839]
+position = Vector2(300, 147)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture19" type="Sprite2D" parent="Floors" unique_id=1313598558]
+position = Vector2(500, 147)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture20" type="Sprite2D" parent="Floors" unique_id=1721324746]
+position = Vector2(700, 147)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture21" type="Sprite2D" parent="Floors" unique_id=1958727775]
+position = Vector2(700, 147)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture22" type="Sprite2D" parent="Floors" unique_id=426653980]
+position = Vector2(900, 147)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture23" type="Sprite2D" parent="Floors" unique_id=1978745569]
+position = Vector2(1100, 147)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture24" type="Sprite2D" parent="Floors" unique_id=1421824470]
+position = Vector2(1300, 147)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture5" type="Sprite2D" parent="Floors" unique_id=1466757137]
+position = Vector2(700, 747)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="PlanksTexture10" type="Sprite2D" parent="Floors" unique_id=1110838102]
+position = Vector2(901, 747)
+rotation = 1.5707964
+texture = ExtResource("1_p4inb")
+
+[node name="Walls" type="Node" parent="." unique_id=1134979463]
+
+[node name="Wallpaper" type="Sprite2D" parent="Walls" unique_id=1793317925]
+position = Vector2(302, -54)
+texture = ExtResource("2_u7b4r")
+
+[node name="Wallpaper2" type="Sprite2D" parent="Walls" unique_id=1155988254]
+position = Vector2(302, -254)
+texture = ExtResource("2_u7b4r")
+
+[node name="Wallpaper3" type="Sprite2D" parent="Walls" unique_id=1410799316]
+position = Vector2(502, -54)
+texture = ExtResource("2_u7b4r")
+
+[node name="Wallpaper4" type="Sprite2D" parent="Walls" unique_id=1787136933]
+position = Vector2(502, -254)
+texture = ExtResource("2_u7b4r")
+
+[node name="Wallpaper5" type="Sprite2D" parent="Walls" unique_id=576778014]
+position = Vector2(702, -54)
+texture = ExtResource("2_u7b4r")
+
+[node name="Wallpaper6" type="Sprite2D" parent="Walls" unique_id=1033947037]
+position = Vector2(702, -254)
+texture = ExtResource("2_u7b4r")
+
+[node name="Wallpaper7" type="Sprite2D" parent="Walls" unique_id=1005948575]
+position = Vector2(902, -54)
+texture = ExtResource("2_u7b4r")
+
+[node name="Wallpaper8" type="Sprite2D" parent="Walls" unique_id=901585648]
+position = Vector2(902, -254)
+texture = ExtResource("2_u7b4r")
+
+[node name="Wallpaper9" type="Sprite2D" parent="Walls" unique_id=1219296506]
+position = Vector2(1102, -54)
+texture = ExtResource("2_u7b4r")
+
+[node name="Wallpaper10" type="Sprite2D" parent="Walls" unique_id=591019998]
+position = Vector2(1102, -254)
+texture = ExtResource("2_u7b4r")
+
+[node name="Wallpaper11" type="Sprite2D" parent="Walls" unique_id=1483094562]
+position = Vector2(1302, -54)
+texture = ExtResource("2_u7b4r")
+
+[node name="Wallpaper12" type="Sprite2D" parent="Walls" unique_id=1571967966]
+position = Vector2(1302, -254)
+texture = ExtResource("2_u7b4r")
