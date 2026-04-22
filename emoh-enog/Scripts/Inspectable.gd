@@ -17,6 +17,7 @@ func interact():
 	if interaction_name == "PoolBookArea":
 		print("a pool book!")
 		$"../../Player/Camera2D/TextBox/TextBoxColor".visible = true 
+		$"../../Player/Camera2D/Label".visible = false 
 		##$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = "There's a beginner's guide to pool here..."
 		
 	if interaction_name == "EvilPlant":
