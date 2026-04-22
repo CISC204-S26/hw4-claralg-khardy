@@ -9,11 +9,21 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
 func interact():
-	print(description)
+	if interaction_name == "PoolBookArea":
+		print("a pool book!")
+		$"../../Player/Camera2D/TextBox/TextBoxColor".visible = true 
+		##$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = "There's a beginner's guide to pool here..."
+		
+	if interaction_name == "EvilPlant":
+		$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = ""
+		$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = "It tried to bite me..."
+		
+	if interaction_name == "": 
+		$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = ""
 	
 		

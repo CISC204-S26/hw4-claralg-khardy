@@ -46,7 +46,6 @@ scale = Vector2(2, 2)
 layer = 3
 
 [node name="TextBoxColor" type="ColorRect" parent="Player/Camera2D/TextBox" unique_id=1239277904]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -62,37 +61,29 @@ scale = Vector2(4.214723, 2.0121946)
 color = Color(0.32941177, 0.32941177, 0.32941177, 0.8666667)
 
 [node name="Dialogue" type="RichTextLabel" parent="Player/Camera2D/TextBox/TextBoxColor" unique_id=1533080604]
-top_level = true
+visibility_layer = 5
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -206.0
-offset_right = 117.0
-offset_bottom = -125.0
+offset_left = -18.813675
+offset_top = -17.515152
+offset_right = 138.18633
+offset_bottom = 52.484848
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
-text = "There's a beginner's guide to pool here..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label" type="Label" parent="Player/Camera2D" unique_id=1033645465]
+[node name="Label" type="Label" parent="Player/Camera2D" unique_id=813636836]
 visible = false
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -34.000004
-offset_top = -56.499996
-offset_right = 144.0
-offset_bottom = -33.499996
-grow_horizontal = 2
-scale = Vector2(0.4, 0.4)
-text = "This looks interesting..."
+offset_right = 40.0
+offset_bottom = 23.0
+text = "This looks interesting... "
 
 [node name="Floor" type="Node" parent="." unique_id=1696479775]
 
@@ -337,7 +328,6 @@ position = Vector2(1.75, 8.5)
 shape = SubResource("RectangleShape2D_2g8os")
 
 [node name="SafeArea" type="Area2D" parent="Interactables" unique_id=1829177941]
-visibility_layer = 2
 z_index = 1
 position = Vector2(1226, -85)
 collision_layer = 2

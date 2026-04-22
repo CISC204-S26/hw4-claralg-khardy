@@ -69,15 +69,17 @@ func _physics_process(delta: float):
 		if nearby_interactables: 
 			nearby_interactables.back().interact() 
 	
-
+	
 ## Area entered signal connection
 func _on_interaction_detector_area_entered(area: Area2D):
 	print("stop touching me :(")
 	#area.set_active(true) 
 	nearby_interactables.append(area)
+	$Camera2D/Label.visible = true
 
 ## Area exited signal connection 
 func _on_interaction_detector_area_exited(area: Area2D):
 	print("go away")
 	#area.set_active(false) 
 	nearby_interactables.erase(area) 
+	$Camera2D/Label.visible = false

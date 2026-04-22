@@ -166,9 +166,9 @@ z_index = 1
 position = Vector2(124, 57)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_s3gua")
-script = ExtResource("6_upvbo")
 
 [node name="PoolBookArea" type="Area2D" parent="PoolBook" unique_id=62818952]
+script = ExtResource("6_upvbo")
 
 [node name="CircleShape" type="CollisionShape2D" parent="PoolBook/PoolBookArea" unique_id=157756205]
 position = Vector2(-36.666668, 14.666668)

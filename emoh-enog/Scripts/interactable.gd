@@ -11,13 +11,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
-
-
-func interact():
-	push_warning("this interactable has no interact() code yet!")
-	if interaction_name == "PoolBook":
-		$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = ""
-		$Player/Camera2D/TextBox/TextBoxColor/Dialogueeass.text = "There's a beginner's guide to pool here..."
-		
