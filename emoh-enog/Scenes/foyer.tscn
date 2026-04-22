@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cqmon862004nt" path="res://Assets/Sprites/Dresser.png" id="1_6dvja"]
 [ext_resource type="Texture2D" uid="uid://bldn2lt45mk4k" path="res://Assets/Sprites/PlanksTexture.png" id="1_p4inb"]
+[ext_resource type="Texture2D" uid="uid://dy531cd46jh4f" path="res://Assets/Sprites/GreenhouseEntranceDoor.png" id="2_nv2dc"]
 [ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="2_u7b4r"]
 
 [node name="Foyer" type="Node2D" unique_id=971780771]
@@ -17,6 +18,11 @@ z_index = 1
 position = Vector2(1246, 72)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_6dvja")
+
+[node name="GreenhouseEntranceDoor" type="Sprite2D" parent="." unique_id=638905904]
+z_index = 1
+position = Vector2(794, -147)
+texture = ExtResource("2_nv2dc")
 
 [node name="Floors" type="Node" parent="." unique_id=1467163015]
 
