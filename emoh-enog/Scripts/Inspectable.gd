@@ -17,7 +17,7 @@ func interact():
 	if interaction_name == "ParlorToFoyer":
 		if Input.is_action_just_pressed("interact"):
 			get_tree().change_scene_to_file("res://Scenes/foyer.tscn")
-			$"../../Player".position == 
+			#$"../../Player".position == 
 	
 	if interaction_name == "PoolBookArea":
 		print("a pool book!")

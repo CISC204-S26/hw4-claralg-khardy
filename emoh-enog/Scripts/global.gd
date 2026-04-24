@@ -1,6 +1,6 @@
 extends Node
 
-@export var right_room_open = false
+@export var right_room_unlocked = false
 @export var greenhouse_unlocked = false
 @export var safe_code = false
 @export var safe_opened = false
