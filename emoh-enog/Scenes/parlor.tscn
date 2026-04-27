@@ -81,7 +81,7 @@ text = "There's a beginner's guide to pool here..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label" type="Label" parent="Player/Camera2D" unique_id=1033645465]
+[node name="InterestLabel" type="Label" parent="Player/Camera2D" unique_id=1033645465]
 visible = false
 show_behind_parent = true
 anchors_preset = 5

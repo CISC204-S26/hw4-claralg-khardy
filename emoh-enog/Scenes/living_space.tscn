@@ -3,6 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="1_ooprq"]
 [ext_resource type="Texture2D" uid="uid://bldn2lt45mk4k" path="res://Assets/Sprites/PlanksTexture.png" id="2_52lfc"]
 [ext_resource type="PackedScene" uid="uid://cbxuiay41iicq" path="res://Scenes/invisible_walls.tscn" id="3_l04r7"]
+[ext_resource type="Texture2D" uid="uid://cqmon862004nt" path="res://Assets/Sprites/Dresser.png" id="4_52lfc"]
+[ext_resource type="Texture2D" uid="uid://borys0e2a0e6u" path="res://Assets/Sprites/Bed.png" id="5_l04r7"]
+[ext_resource type="Texture2D" uid="uid://8y2a55t6p22r" path="res://Assets/Sprites/Lamp.png" id="6_313kx"]
+[ext_resource type="Texture2D" uid="uid://dh8lk1nvxqnth" path="res://Assets/Sprites/Bookshelf.png" id="7_pyms1"]
+[ext_resource type="Texture2D" uid="uid://dbxnn8lh5bf1i" path="res://Assets/Sprites/Rug.png" id="8_bv5ku"]
+[ext_resource type="Texture2D" uid="uid://dw37scqdusuw6" path="res://Assets/Sprites/PictureFrame.png" id="9_bymhj"]
+[ext_resource type="Texture2D" uid="uid://yaklkml1h5a5" path="res://Assets/Sprites/claraenaPicture.png" id="10_1t30t"]
+[ext_resource type="Texture2D" uid="uid://d3kcy7ioc057o" path="res://Assets/Sprites/dogMemePicture.png" id="11_ksogy"]
+[ext_resource type="Texture2D" uid="uid://bbto02f8skxv1" path="res://Assets/Sprites/LossPicture.png" id="12_qqgka"]
+[ext_resource type="Texture2D" uid="uid://b4fw3huy0t67g" path="res://Assets/Sprites/icon.svg" id="13_12vfs"]
 
 [node name="Living space" type="Node2D" unique_id=267068913]
 
@@ -116,4 +126,79 @@ rotation = 1.5707964
 position = Vector2(1158, -428)
 rotation = 1.5707964
 
-[node name="Interactables" type="Node" parent="." unique_id=595566112]
+[node name="Furniture" type="Node" parent="." unique_id=595566112]
+
+[node name="Dresser1" type="Sprite2D" parent="Furniture" unique_id=1391701491]
+position = Vector2(1005.75, -56.5)
+scale = Vector2(1.3674996, 2.045)
+texture = ExtResource("4_52lfc")
+
+[node name="Bed" type="Sprite2D" parent="Furniture" unique_id=63123195]
+position = Vector2(383.5, -6.5000224)
+scale = Vector2(2.5649998, 2.5649998)
+texture = ExtResource("5_l04r7")
+
+[node name="Lamp" type="Sprite2D" parent="Furniture" unique_id=2106493493]
+position = Vector2(968.00006, -167)
+scale = Vector2(1.66, 1.66)
+texture = ExtResource("6_313kx")
+
+[node name="Bookshelf" type="Sprite2D" parent="Furniture" unique_id=449024628]
+position = Vector2(789, -114)
+scale = Vector2(3.46, 3.46)
+texture = ExtResource("7_pyms1")
+
+[node name="Rug" type="Sprite2D" parent="Furniture" unique_id=564591886]
+position = Vector2(385, 223)
+scale = Vector2(3.69, 3.69)
+texture = ExtResource("8_bv5ku")
+
+[node name="Pictures" type="Node" parent="." unique_id=700238335]
+
+[node name="Frame1" type="Sprite2D" parent="Pictures" unique_id=1693629438]
+position = Vector2(218, -253)
+texture = ExtResource("9_bymhj")
+
+[node name="Picture1" type="Sprite2D" parent="Pictures/Frame1" unique_id=164320695]
+show_behind_parent = true
+position = Vector2(0.862072, 0.25)
+scale = Vector2(0.9022988, 0.9022989)
+texture = ExtResource("10_1t30t")
+
+[node name="Frame2" type="Sprite2D" parent="Pictures" unique_id=455174672]
+position = Vector2(392, -358)
+texture = ExtResource("9_bymhj")
+
+[node name="Picture2" type="Sprite2D" parent="Pictures/Frame2" unique_id=1072488368]
+show_behind_parent = true
+position = Vector2(-0.40426636, 0.50001526)
+scale = Vector2(1.6808513, 1.6808513)
+texture = ExtResource("11_ksogy")
+
+[node name="Frame3" type="Sprite2D" parent="Pictures" unique_id=1933176004]
+position = Vector2(502, -193)
+scale = Vector2(1.18, 1.18)
+texture = ExtResource("9_bymhj")
+
+[node name="Picture3" type="Sprite2D" parent="Pictures/Frame3" unique_id=2046825811]
+
+[node name="Frame4" type="Sprite2D" parent="Pictures" unique_id=616492226]
+position = Vector2(596.5, -333.5)
+scale = Vector2(0.71, 0.71)
+texture = ExtResource("9_bymhj")
+
+[node name="Picture4" type="Sprite2D" parent="Pictures/Frame4" unique_id=78726065]
+show_behind_parent = true
+position = Vector2(-2.0503998e-05, 2.0503998e-05)
+scale = Vector2(0.80281657, 0.80281657)
+texture = ExtResource("12_qqgka")
+
+[node name="Frame5" type="Sprite2D" parent="Pictures" unique_id=693308442]
+position = Vector2(1045, -317)
+texture = ExtResource("9_bymhj")
+
+[node name="Picture5" type="Sprite2D" parent="Pictures/Frame5" unique_id=1259356916]
+show_behind_parent = true
+position = Vector2(0.49998665, -0.49998665)
+scale = Vector2(0.69531274, 0.69531274)
+texture = ExtResource("13_12vfs")
