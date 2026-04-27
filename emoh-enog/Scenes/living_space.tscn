@@ -116,6 +116,14 @@ texture = ExtResource("2_52lfc")
 [node name="InvisibleWalls" parent="Invisible Walls" unique_id=634904761 instance=ExtResource("3_l04r7")]
 position = Vector2(60, 1)
 
+[node name="InvisibleWallsBookshelf" parent="Invisible Walls" unique_id=239775328 instance=ExtResource("3_l04r7")]
+position = Vector2(731.00006, 17)
+scale = Vector2(0.42000002, 2.0599995)
+
+[node name="InvisibleWallsBed" parent="Invisible Walls" unique_id=999104115 instance=ExtResource("3_l04r7")]
+position = Vector2(184.00002, 34.00001)
+scale = Vector2(0.3799994, 3.6199987)
+
 [node name="InvisibleWalls2" parent="Invisible Walls" unique_id=2127307316 instance=ExtResource("3_l04r7")]
 position = Vector2(60, 657)
 
