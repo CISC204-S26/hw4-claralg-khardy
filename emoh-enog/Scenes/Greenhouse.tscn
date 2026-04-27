@@ -9,146 +9,192 @@
 
 [node name="Glass" type="Node" parent="." unique_id=1093202370]
 
-[node name="panel" type="Sprite2D" parent="Glass" unique_id=592433310]
-position = Vector2(86, 86)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel1" type="Sprite2D" parent="Glass" unique_id=2070239173]
+position = Vector2(101, -103.00001)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel2" type="Sprite2D" parent="Glass" unique_id=1064872885]
-position = Vector2(263, 86)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel2" type="Sprite2D" parent="Glass" unique_id=1282000146]
+position = Vector2(301, -103.00001)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel3" type="Sprite2D" parent="Glass" unique_id=250165022]
-position = Vector2(440, 86)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel3" type="Sprite2D" parent="Glass" unique_id=1878547402]
+position = Vector2(501, -103)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel4" type="Sprite2D" parent="Glass" unique_id=1348785446]
-position = Vector2(616, 85.99999)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel4" type="Sprite2D" parent="Glass" unique_id=1966287774]
+position = Vector2(701, -103)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel5" type="Sprite2D" parent="Glass" unique_id=308213648]
-position = Vector2(793, 85.99999)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel5" type="Sprite2D" parent="Glass" unique_id=1967840704]
+position = Vector2(901, -103)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel6" type="Sprite2D" parent="Glass" unique_id=448473382]
-position = Vector2(970, 85.99999)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel6" type="Sprite2D" parent="Glass" unique_id=790813555]
+position = Vector2(1101, -103)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel7" type="Sprite2D" parent="Glass" unique_id=436538609]
-position = Vector2(1147, 85.99999)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel7" type="Sprite2D" parent="Glass" unique_id=1605501068]
+position = Vector2(101, -302)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel8" type="Sprite2D" parent="Glass" unique_id=2115842943]
-position = Vector2(86, 258)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel8" type="Sprite2D" parent="Glass" unique_id=1296737120]
+position = Vector2(301, -302)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel9" type="Sprite2D" parent="Glass" unique_id=1779797228]
-position = Vector2(263, 258)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel9" type="Sprite2D" parent="Glass" unique_id=146616254]
+position = Vector2(501, -302)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel10" type="Sprite2D" parent="Glass" unique_id=1826025499]
-position = Vector2(440, 258)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel10" type="Sprite2D" parent="Glass" unique_id=125489029]
+position = Vector2(701, -302)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel11" type="Sprite2D" parent="Glass" unique_id=1863354338]
-position = Vector2(616, 258)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel11" type="Sprite2D" parent="Glass" unique_id=1125643869]
+position = Vector2(901, -302)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel12" type="Sprite2D" parent="Glass" unique_id=548245861]
-position = Vector2(792.965, 258)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel12" type="Sprite2D" parent="Glass" unique_id=770102100]
+position = Vector2(1101, -302)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel13" type="Sprite2D" parent="Glass" unique_id=1232930175]
-position = Vector2(970, 258)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel13" type="Sprite2D" parent="Glass" unique_id=548090621]
+position = Vector2(101, -501)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
-[node name="panel14" type="Sprite2D" parent="Glass" unique_id=888906235]
-position = Vector2(1147, 258)
-scale = Vector2(1.7701561, 1.7233976)
+[node name="glassPanel14" type="Sprite2D" parent="Glass" unique_id=988520745]
+position = Vector2(301, -501)
+scale = Vector2(2, 2)
+texture = ExtResource("1_mi17g")
+
+[node name="glassPanel15" type="Sprite2D" parent="Glass" unique_id=86748294]
+position = Vector2(501, -501)
+scale = Vector2(2, 2)
+texture = ExtResource("1_mi17g")
+
+[node name="glassPanel16" type="Sprite2D" parent="Glass" unique_id=1777096538]
+position = Vector2(701, -501)
+scale = Vector2(2, 2)
+texture = ExtResource("1_mi17g")
+
+[node name="glassPanel17" type="Sprite2D" parent="Glass" unique_id=1508043554]
+position = Vector2(901, -501)
+scale = Vector2(2, 2)
+texture = ExtResource("1_mi17g")
+
+[node name="glassPanel18" type="Sprite2D" parent="Glass" unique_id=1612990288]
+position = Vector2(1101, -501)
+scale = Vector2(2, 2)
 texture = ExtResource("1_mi17g")
 
 [node name="Floor" type="Node" parent="." unique_id=387086953]
 
-[node name="tiles" type="Sprite2D" parent="Floor" unique_id=281049234]
-position = Vector2(86, 428.99997)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks1" type="Sprite2D" parent="Floor" unique_id=1323082293]
+position = Vector2(101, 96)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles2" type="Sprite2D" parent="Floor" unique_id=2137468858]
-position = Vector2(257, 429)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks2" type="Sprite2D" parent="Floor" unique_id=358075680]
+position = Vector2(301, 96)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles3" type="Sprite2D" parent="Floor" unique_id=1844936517]
-position = Vector2(428, 429)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks3" type="Sprite2D" parent="Floor" unique_id=65055311]
+position = Vector2(501, 96)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles4" type="Sprite2D" parent="Floor" unique_id=1101833884]
-position = Vector2(598.99994, 429)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks4" type="Sprite2D" parent="Floor" unique_id=385709425]
+position = Vector2(701, 96)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles5" type="Sprite2D" parent="Floor" unique_id=1359897787]
-position = Vector2(770, 428.99997)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks5" type="Sprite2D" parent="Floor" unique_id=1478673578]
+position = Vector2(901, 96)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles6" type="Sprite2D" parent="Floor" unique_id=2099339106]
-position = Vector2(940.99994, 429)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks6" type="Sprite2D" parent="Floor" unique_id=1136372877]
+position = Vector2(1101, 96)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles7" type="Sprite2D" parent="Floor" unique_id=840616324]
-position = Vector2(1111.9999, 429)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks7" type="Sprite2D" parent="Floor" unique_id=815664069]
+position = Vector2(101, 296)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles8" type="Sprite2D" parent="Floor" unique_id=1080656987]
-position = Vector2(85, 599.99994)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks8" type="Sprite2D" parent="Floor" unique_id=311064553]
+position = Vector2(301, 296)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles9" type="Sprite2D" parent="Floor" unique_id=1919405771]
-position = Vector2(255.99997, 599.99994)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks9" type="Sprite2D" parent="Floor" unique_id=771752648]
+position = Vector2(501, 296)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles10" type="Sprite2D" parent="Floor" unique_id=952728537]
-position = Vector2(426.99997, 599.99994)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks10" type="Sprite2D" parent="Floor" unique_id=1012142449]
+position = Vector2(701, 296)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles11" type="Sprite2D" parent="Floor" unique_id=927674864]
-position = Vector2(597.99994, 599.99994)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks11" type="Sprite2D" parent="Floor" unique_id=1335033158]
+position = Vector2(901, 296)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles12" type="Sprite2D" parent="Floor" unique_id=80860578]
-position = Vector2(769, 599.99994)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks12" type="Sprite2D" parent="Floor" unique_id=1746912257]
+position = Vector2(1101, 296)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles13" type="Sprite2D" parent="Floor" unique_id=1735629962]
-position = Vector2(939.99994, 599.99994)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks13" type="Sprite2D" parent="Floor" unique_id=1595299272]
+position = Vector2(101, 496)
 texture = ExtResource("2_nfiyq")
 
-[node name="tiles14" type="Sprite2D" parent="Floor" unique_id=259051939]
-position = Vector2(1111, 599.99994)
-scale = Vector2(0.855, 0.855)
+[node name="Bricks14" type="Sprite2D" parent="Floor" unique_id=2084964117]
+position = Vector2(301, 496)
+texture = ExtResource("2_nfiyq")
+
+[node name="Bricks15" type="Sprite2D" parent="Floor" unique_id=436186891]
+position = Vector2(501, 496)
+texture = ExtResource("2_nfiyq")
+
+[node name="Bricks16" type="Sprite2D" parent="Floor" unique_id=1258137250]
+position = Vector2(701, 496)
+texture = ExtResource("2_nfiyq")
+
+[node name="Bricks17" type="Sprite2D" parent="Floor" unique_id=146454991]
+position = Vector2(901, 496)
+texture = ExtResource("2_nfiyq")
+
+[node name="Bricks18" type="Sprite2D" parent="Floor" unique_id=1653627249]
+position = Vector2(1101, 496)
+texture = ExtResource("2_nfiyq")
+
+[node name="Bricks19" type="Sprite2D" parent="Floor" unique_id=1808533100]
+position = Vector2(101, 695)
+texture = ExtResource("2_nfiyq")
+
+[node name="Bricks20" type="Sprite2D" parent="Floor" unique_id=1412724458]
+position = Vector2(301, 695)
+texture = ExtResource("2_nfiyq")
+
+[node name="Bricks21" type="Sprite2D" parent="Floor" unique_id=1927090875]
+position = Vector2(501, 695)
+texture = ExtResource("2_nfiyq")
+
+[node name="Bricks22" type="Sprite2D" parent="Floor" unique_id=391882423]
+position = Vector2(701, 695)
+texture = ExtResource("2_nfiyq")
+
+[node name="Bricks23" type="Sprite2D" parent="Floor" unique_id=89869116]
+position = Vector2(901, 695)
+texture = ExtResource("2_nfiyq")
+
+[node name="Bricks24" type="Sprite2D" parent="Floor" unique_id=1890772242]
+position = Vector2(1101, 695)
 texture = ExtResource("2_nfiyq")
 
 [node name="Plants" type="Node" parent="." unique_id=820530450]
@@ -156,22 +202,22 @@ texture = ExtResource("2_nfiyq")
 [node name="InvisibleWalls" type="Node" parent="." unique_id=91601308]
 
 [node name="InvisibleWalls" parent="InvisibleWalls" unique_id=634904761 instance=ExtResource("3_a277v")]
-position = Vector2(60, 323)
+position = Vector2(60, 1)
 
 [node name="InvisibleWalls2" parent="InvisibleWalls" unique_id=751885861 instance=ExtResource("3_a277v")]
 position = Vector2(60, 657)
 
 [node name="InvisibleWalls3" parent="InvisibleWalls" unique_id=471576570 instance=ExtResource("3_a277v")]
-position = Vector2(7, -72)
+position = Vector2(7, -428)
 rotation = 1.5707964
 
 [node name="InvisibleWalls4" parent="InvisibleWalls" unique_id=1396423024 instance=ExtResource("3_a277v")]
-position = Vector2(1158, -72)
+position = Vector2(1158, -428)
 rotation = 1.5707964
 
 [node name="Player" parent="." unique_id=1095870449 instance=ExtResource("4_4tkm1")]
 z_index = 2
-position = Vector2(458, 471)
+position = Vector2(532, 474)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=365884575]

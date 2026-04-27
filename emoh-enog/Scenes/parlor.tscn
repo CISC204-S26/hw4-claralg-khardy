@@ -83,6 +83,7 @@ vertical_alignment = 1
 
 [node name="Label" type="Label" parent="Player/Camera2D" unique_id=1033645465]
 visible = false
+show_behind_parent = true
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://bq7v2mwvklbb"]
+
+[ext_resource type="PackedScene" uid="uid://cbxuiay41iicq" path="res://Scenes/invisible_walls.tscn" id="1_uypj6"]
+[ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="1_xl8wh"]
+[ext_resource type="Texture2D" uid="uid://bldn2lt45mk4k" path="res://Assets/Sprites/PlanksTexture.png" id="2_1aifo"]
+
+[node name="Living space" type="Node2D" unique_id=267068913]
+
+[node name="Walls" type="Node" parent="." unique_id=2273325]
+
+[node name="Wallpaper1" type="Sprite2D" parent="Walls" unique_id=1998447620]
+position = Vector2(101, -270)
+scale = Vector2(1, 2.71)
+texture = ExtResource("1_xl8wh")
+
+[node name="Wallpaper2" type="Sprite2D" parent="Walls" unique_id=1036854496]
+position = Vector2(301, -270)
+scale = Vector2(1, 2.71)
+texture = ExtResource("1_xl8wh")
+
+[node name="Wallpaper3" type="Sprite2D" parent="Walls" unique_id=1686814543]
+position = Vector2(501, -270)
+scale = Vector2(1, 2.71)
+texture = ExtResource("1_xl8wh")
+
+[node name="Wallpaper4" type="Sprite2D" parent="Walls" unique_id=1677147366]
+position = Vector2(701, -270)
+scale = Vector2(1, 2.71)
+texture = ExtResource("1_xl8wh")
+
+[node name="Wallpaper5" type="Sprite2D" parent="Walls" unique_id=353255078]
+position = Vector2(900, -270)
+scale = Vector2(1, 2.71)
+texture = ExtResource("1_xl8wh")
+
+[node name="Wallpaper6" type="Sprite2D" parent="Walls" unique_id=1857064505]
+position = Vector2(1100, -270)
+scale = Vector2(1, 2.71)
+texture = ExtResource("1_xl8wh")
+
+[node name="Floor" type="Node" parent="." unique_id=775920363]
+
+[node name="Plank1" type="Sprite2D" parent="Floor" unique_id=1359957301]
+position = Vector2(210.00002, 101)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Plank2" type="Sprite2D" parent="Floor" unique_id=1582008139]
+position = Vector2(623.99994, 101)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Plank3" type="Sprite2D" parent="Floor" unique_id=1479762584]
+position = Vector2(1038, 101)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Plank4" type="Sprite2D" parent="Floor" unique_id=1315911977]
+position = Vector2(210.00002, 302)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Plank5" type="Sprite2D" parent="Floor" unique_id=192149105]
+position = Vector2(623.99994, 302)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Plank6" type="Sprite2D" parent="Floor" unique_id=1975981242]
+position = Vector2(1038, 302)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Plank7" type="Sprite2D" parent="Floor" unique_id=1597014913]
+position = Vector2(210.00002, 502)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Plank8" type="Sprite2D" parent="Floor" unique_id=996772811]
+position = Vector2(623.99994, 502)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Plank9" type="Sprite2D" parent="Floor" unique_id=1979300069]
+position = Vector2(1038, 502)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Plank10" type="Sprite2D" parent="Floor" unique_id=2115494575]
+position = Vector2(210.00002, 702)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Plank11" type="Sprite2D" parent="Floor" unique_id=1460256380]
+position = Vector2(623.99994, 702)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Plank12" type="Sprite2D" parent="Floor" unique_id=1827620671]
+position = Vector2(1038, 702)
+scale = Vector2(2.0700002, 1)
+texture = ExtResource("2_1aifo")
+
+[node name="Invisible Walls" type="Node" parent="." unique_id=1682051018]
+
+[node name="InvisibleWalls" parent="Invisible Walls" unique_id=634904761 instance=ExtResource("1_uypj6")]
+position = Vector2(60, 1)
+
+[node name="InvisibleWalls2" parent="Invisible Walls" unique_id=2127307316 instance=ExtResource("1_uypj6")]
+position = Vector2(60, 657)
+
+[node name="InvisibleWalls3" parent="Invisible Walls" unique_id=277657367 instance=ExtResource("1_uypj6")]
+position = Vector2(7, -428)
+rotation = 1.5707964
+
+[node name="InvisibleWalls4" parent="Invisible Walls" unique_id=832971404 instance=ExtResource("1_uypj6")]
+position = Vector2(1158, -428)
+rotation = 1.5707964
+
+[node name="Interactables" type="Node" parent="." unique_id=595566112]
