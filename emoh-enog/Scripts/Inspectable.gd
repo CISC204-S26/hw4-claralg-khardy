@@ -30,7 +30,8 @@ func interact():
 		$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = ""
 		$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = "It tried to bite me..."
 		
-	if interaction_name == "": 
-		$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = ""
+	#if interaction_name == "": 
+		#$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = ""
 	
-		
+	await get_tree().create_timer(4).timeout
+	$"../../Player/Camera2D/TextBox".visible = false
