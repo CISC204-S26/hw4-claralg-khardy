@@ -14,11 +14,17 @@ func _process(_delta: float) -> void:
 
 
 func interact():
+	if interaction_name == "ParlorToFoyer":
+		if Input.is_action_just_pressed("interact"):
+			get_tree().change_scene_to_file("res://Scenes/foyer.tscn")
+			#$"../../Player".position == 
+	
 	if interaction_name == "PoolBookArea":
 		print("a pool book!")
 		$"../../Player/Camera2D/TextBox/TextBoxColor".visible = true 
 		$"../../Player/Camera2D/Label".visible = false 
-		##$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = "There's a beginner's guide to pool here..."
+		$"../../Player/Camera2D/TextBox/TextBoxColor/Dialogue".text == "There's a beginner's guide to pool here..."
+		
 		
 	if interaction_name == "EvilPlant":
 		$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = ""

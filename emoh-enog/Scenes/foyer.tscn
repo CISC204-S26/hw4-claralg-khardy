@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bldn2lt45mk4k" path="res://Assets/Sprites/PlanksTexture.png" id="1_p4inb"]
 [ext_resource type="Texture2D" uid="uid://dy531cd46jh4f" path="res://Assets/Sprites/GreenhouseEntranceDoor.png" id="2_nv2dc"]
 [ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="2_u7b4r"]
+[ext_resource type="PackedScene" uid="uid://dg733nqa2uumq" path="res://Scenes/pointing_arrow.tscn" id="5_60nir"]
 
 [node name="Foyer" type="Node2D" unique_id=971780771]
 
@@ -190,3 +191,9 @@ texture = ExtResource("2_u7b4r")
 [node name="Wallpaper12" type="Sprite2D" parent="Walls" unique_id=1571967966]
 position = Vector2(1302, -254)
 texture = ExtResource("2_u7b4r")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1982373421]
+position = Vector2(418, 339)
+
+[node name="Pointing arrow" parent="." unique_id=63671882 instance=ExtResource("5_60nir")]
+position = Vector2(942, 383)

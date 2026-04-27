@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dg733nqa2uumq"]
+
+[ext_resource type="Texture2D" uid="uid://blfpdg0m1tk0v" path="res://Assets/Sprites/Arrow.png" id="1_2q44x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g28ax"]
+atlas = ExtResource("1_2q44x")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2fwl"]
+atlas = ExtResource("1_2q44x")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr2r8"]
+atlas = ExtResource("1_2q44x")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccdu0"]
+atlas = ExtResource("1_2q44x")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7qin"]
+atlas = ExtResource("1_2q44x")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66p1h"]
+atlas = ExtResource("1_2q44x")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2obp"]
+atlas = ExtResource("1_2q44x")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpica"]
+animations = [{
+"frames": [{
+"duration": 0.31,
+"texture": SubResource("AtlasTexture_g28ax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2fwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr2r8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccdu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7qin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66p1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2obp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Pointing arrow" type="AnimatedSprite2D" unique_id=63671882]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_rpica")
+autoplay = "default"
+frame_progress = 0.893921

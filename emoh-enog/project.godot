@@ -15,6 +15,10 @@ run/main_scene="uid://kb4khjfbgwd7"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://Assets/Sprites/icon.svg"
 
+[autoload]
+
+global="*uid://cw6rp6nj3mpxe"
+
 [input]
 
 walk_up={
