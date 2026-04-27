@@ -34,5 +34,8 @@ func interact():
 	#if interaction_name == "": 
 		#$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = ""
 	
+	##Place key under rug in living space, add arrow to lampshade when turned on to point to key. 
+	##Make large picture by the bed an indicator to turn on the lamp. Bookshelf is a red herring. 
+	
 	await get_tree().create_timer(4).timeout
 	$"../../Player/Camera2D/TextBox".visible = false
