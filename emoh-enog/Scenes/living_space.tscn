@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bbto02f8skxv1" path="res://Assets/Sprites/LossPicture.png" id="12_qqgka"]
 [ext_resource type="Texture2D" uid="uid://b4fw3huy0t67g" path="res://Assets/Sprites/icon.svg" id="13_12vfs"]
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="14_pyms1"]
+[ext_resource type="PackedScene" uid="uid://dg733nqa2uumq" path="res://Scenes/pointing_arrow.tscn" id="15_bv5ku"]
 
 [node name="Living space" type="Node2D" unique_id=267068913]
 
@@ -214,7 +215,7 @@ texture = ExtResource("13_12vfs")
 
 [node name="Player" parent="." unique_id=1095870449 instance=ExtResource("14_pyms1")]
 z_index = 2
-position = Vector2(110, 295)
+position = Vector2(341, 295)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1424285856]
@@ -271,3 +272,6 @@ offset_bottom = -33.499996
 grow_horizontal = 2
 scale = Vector2(0.4, 0.4)
 text = "This looks interesting..."
+
+[node name="LivingSpaceToFoyerArrow" parent="." unique_id=63671882 instance=ExtResource("15_bv5ku")]
+position = Vector2(74, 271)

@@ -3,7 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://b3tbujwop4r2q" path="res://Assets/Sprites/GreenhouseWindows.png" id="1_mi17g"]
 [ext_resource type="Texture2D" uid="uid://bovus7a8n6xeh" path="res://Assets/Sprites/BricksTexture.png" id="2_nfiyq"]
 [ext_resource type="PackedScene" uid="uid://cbxuiay41iicq" path="res://Scenes/invisible_walls.tscn" id="3_a277v"]
+[ext_resource type="Texture2D" uid="uid://b362wnr4xx8ud" path="res://Assets/Sprites/Table.png" id="3_b71cq"]
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="4_4tkm1"]
+[ext_resource type="Texture2D" uid="uid://cvsvy74q52xkg" path="res://Assets/Sprites/EvilPlant.png" id="4_88u8o"]
+[ext_resource type="PackedScene" uid="uid://dg733nqa2uumq" path="res://Scenes/pointing_arrow.tscn" id="5_4tkm1"]
 
 [node name="Greenhouse" type="Node2D" unique_id=790778910]
 
@@ -197,7 +200,43 @@ texture = ExtResource("2_nfiyq")
 position = Vector2(1101, 695)
 texture = ExtResource("2_nfiyq")
 
+[node name="Furniture" type="Node" parent="." unique_id=1074912056]
+
+[node name="Table1" type="Sprite2D" parent="Furniture" unique_id=1833950536]
+position = Vector2(961, 107)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_b71cq")
+
+[node name="Table2" type="Sprite2D" parent="Furniture" unique_id=2106224003]
+position = Vector2(292, 107)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_b71cq")
+
+[node name="Table3" type="Sprite2D" parent="Furniture" unique_id=566580985]
+position = Vector2(292, 346)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_b71cq")
+
+[node name="Table4" type="Sprite2D" parent="Furniture" unique_id=767351528]
+position = Vector2(955, 354)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_b71cq")
+
+[node name="Table5" type="Sprite2D" parent="Furniture" unique_id=256642202]
+position = Vector2(955, 593)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_b71cq")
+
+[node name="Table6" type="Sprite2D" parent="Furniture" unique_id=934881920]
+position = Vector2(287, 592)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_b71cq")
+
 [node name="Plants" type="Node" parent="." unique_id=820530450]
+
+[node name="EvilPlant" type="Sprite2D" parent="Plants" unique_id=2117559764]
+position = Vector2(614, 0)
+texture = ExtResource("4_88u8o")
 
 [node name="InvisibleWalls" type="Node" parent="." unique_id=91601308]
 
@@ -257,3 +296,6 @@ theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="GreenhouseToFoyerArrow" parent="." unique_id=63671882 instance=ExtResource("5_4tkm1")]
+position = Vector2(599, 609)

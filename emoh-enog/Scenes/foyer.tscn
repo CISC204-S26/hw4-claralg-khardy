@@ -196,8 +196,14 @@ texture = ExtResource("2_u7b4r")
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1982373421]
 position = Vector2(418, 339)
 
-[node name="Pointing arrow" parent="." unique_id=63671882 instance=ExtResource("5_60nir")]
-position = Vector2(942, 383)
+[node name="FoyerToParlorArrow" parent="." unique_id=63671882 instance=ExtResource("5_60nir")]
+position = Vector2(309, 321)
+
+[node name="FoyerToGreenhouseArrow" parent="." unique_id=1013999142 instance=ExtResource("5_60nir")]
+position = Vector2(793, 112)
+
+[node name="FoyerToLivingSpaceArrow" parent="." unique_id=1084766483 instance=ExtResource("5_60nir")]
+position = Vector2(1317, 316)
 
 [node name="Player" parent="." unique_id=1095870449 instance=ExtResource("6_7bfhw")]
 z_index = 2
