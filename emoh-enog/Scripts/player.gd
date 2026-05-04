@@ -60,8 +60,8 @@ func _physics_process(_delta: float):
 	
 	## Handles interactable ability
 	if Input.is_action_just_pressed("interact"): 
-		if nearby_interactables: 
-			nearby_interactables.back().interact() 
+		pass #if nearby_interactables: 
+			#nearby_interactables.back().interact() 
 	
 	
 ## Area entered signal connection
@@ -69,6 +69,7 @@ func _on_interaction_detector_area_entered(area: Area2D):
 	print("stop touching me :(")
 	#area.set_active(true) 
 	nearby_interactables.append(area)
+	##make into an if else statement for the other labels, trying to figure out how
 	$Camera2D/InterestLabel.visible = true
 
 ## Area exited signal connection 
@@ -77,3 +78,14 @@ func _on_interaction_detector_area_exited(area: Area2D):
 	#area.set_active(false) 
 	nearby_interactables.erase(area) 
 	$Camera2D/InterestLabel.visible = false
+	
+
+
+func _on_living_space_to_foyer_area_entered(_area: Area2D):
+	print("we can move!") 
+	$Camera2D/InterestLabel.visible = false 
+	$Camera2D/GoBackLabel.visible = true
+	if Input.is_action_just_pressed("interact"):
+			get_tree().change_scene_to_file("res://Scenes/foyer.tscn")
+			$"../../Player".position == Vector2(806, 683) 
+			$AnimatedSprite2D.play("IdleUp")

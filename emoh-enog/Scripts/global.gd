@@ -13,7 +13,7 @@ func _ready() -> void:
 	if safe_code == true and key_obtained == true:
 		##Input second sprite for safe.
 		if Input.is_action_just_pressed("interact"):
-			$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text == "It's already opened, I got the key from inside"
+			pass #$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text == "It's already opened, I got the key from inside"
 
 ##Upon entering the living space, have player sprite flipped to walk right 
 ##(since the door is on the left)
@@ -23,5 +23,7 @@ func _ready() -> void:
 ##Will work more after I sleep (I am so sorry for the delay)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
+	
+	

@@ -11,10 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://dw37scqdusuw6" path="res://Assets/Sprites/PictureFrame.png" id="9_bymhj"]
 [ext_resource type="Texture2D" uid="uid://yaklkml1h5a5" path="res://Assets/Sprites/claraenaPicture.png" id="10_1t30t"]
 [ext_resource type="Texture2D" uid="uid://d3kcy7ioc057o" path="res://Assets/Sprites/dogMemePicture.png" id="11_ksogy"]
+[ext_resource type="Texture2D" uid="uid://cfdjl5sibsqj" path="res://Assets/Sprites/LightBulb.png" id="12_1t30t"]
 [ext_resource type="Texture2D" uid="uid://bbto02f8skxv1" path="res://Assets/Sprites/LossPicture.png" id="12_qqgka"]
 [ext_resource type="Texture2D" uid="uid://b4fw3huy0t67g" path="res://Assets/Sprites/icon.svg" id="13_12vfs"]
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="14_pyms1"]
 [ext_resource type="PackedScene" uid="uid://dg733nqa2uumq" path="res://Scenes/pointing_arrow.tscn" id="15_bv5ku"]
+[ext_resource type="Script" uid="uid://tshyy0gapif4" path="res://Scripts/Inspectable.gd" id="16_1t30t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1t30t"]
 
 [node name="Living space" type="Node2D" unique_id=267068913]
 
@@ -166,7 +170,7 @@ texture = ExtResource("8_bv5ku")
 [node name="Pictures" type="Node" parent="." unique_id=700238335]
 
 [node name="Frame1" type="Sprite2D" parent="Pictures" unique_id=1693629438]
-position = Vector2(218, -253)
+position = Vector2(218, -210)
 texture = ExtResource("9_bymhj")
 
 [node name="Picture1" type="Sprite2D" parent="Pictures/Frame1" unique_id=164320695]
@@ -176,7 +180,7 @@ scale = Vector2(0.9022988, 0.9022989)
 texture = ExtResource("10_1t30t")
 
 [node name="Frame2" type="Sprite2D" parent="Pictures" unique_id=455174672]
-position = Vector2(392, -358)
+position = Vector2(350, -127)
 texture = ExtResource("9_bymhj")
 
 [node name="Picture2" type="Sprite2D" parent="Pictures/Frame2" unique_id=1072488368]
@@ -191,9 +195,12 @@ scale = Vector2(1.18, 1.18)
 texture = ExtResource("9_bymhj")
 
 [node name="Picture3" type="Sprite2D" parent="Pictures/Frame3" unique_id=2046825811]
+show_behind_parent = true
+scale = Vector2(0.77, 0.77)
+texture = ExtResource("12_1t30t")
 
 [node name="Frame4" type="Sprite2D" parent="Pictures" unique_id=616492226]
-position = Vector2(596.5, -333.5)
+position = Vector2(384, -252)
 scale = Vector2(0.71, 0.71)
 texture = ExtResource("9_bymhj")
 
@@ -204,7 +211,7 @@ scale = Vector2(0.80281657, 0.80281657)
 texture = ExtResource("12_qqgka")
 
 [node name="Frame5" type="Sprite2D" parent="Pictures" unique_id=693308442]
-position = Vector2(1045, -317)
+position = Vector2(1069, -255)
 texture = ExtResource("9_bymhj")
 
 [node name="Picture5" type="Sprite2D" parent="Pictures/Frame5" unique_id=1259356916]
@@ -273,5 +280,32 @@ grow_horizontal = 2
 scale = Vector2(0.4, 0.4)
 text = "This looks interesting..."
 
-[node name="LivingSpaceToFoyerArrow" parent="." unique_id=63671882 instance=ExtResource("15_bv5ku")]
+[node name="GoBackLabel" type="Label" parent="Player/Camera2D" unique_id=1273227417]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Go back? "
+
+[node name="GoNextLabel" type="Label" parent="Player/Camera2D" unique_id=1281346302]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Go to the next room? "
+
+[node name="LivingSpaceToFoyer" type="Area2D" parent="." unique_id=565561718]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+script = ExtResource("16_1t30t")
+metadata/_custom_type_script = "uid://d2tjxyv607xvn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LivingSpaceToFoyer" unique_id=311396291]
+top_level = true
 position = Vector2(74, 271)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_1t30t")
+
+[node name="LivingSpaceToFoyerArrow" parent="LivingSpaceToFoyer" unique_id=63671882 instance=ExtResource("15_bv5ku")]
+position = Vector2(74, 271)
+
+[connection signal="area_entered" from="LivingSpaceToFoyer" to="Player" method="_on_living_space_to_foyer_area_entered"]
