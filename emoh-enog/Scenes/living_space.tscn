@@ -224,6 +224,7 @@ texture = ExtResource("13_12vfs")
 z_index = 2
 position = Vector2(341, 295)
 scale = Vector2(2, 2)
+collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1424285856]
 
@@ -294,9 +295,10 @@ text = "Go to the next room? "
 
 [node name="LivingSpaceToFoyer" type="Area2D" parent="." unique_id=565561718]
 collision_layer = 2
-collision_mask = 0
 monitoring = false
 script = ExtResource("16_1t30t")
+interaction_name = "ToFoyer"
+interaction_type = "transport"
 metadata/_custom_type_script = "uid://d2tjxyv607xvn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LivingSpaceToFoyer" unique_id=311396291]
