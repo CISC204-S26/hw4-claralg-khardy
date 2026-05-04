@@ -22,8 +22,8 @@ func interact():
 	
 	##Handles labels and text disappearing 
 	if Input.is_action_just_pressed("interact"): 
-		$"../../Player/Camera2D/TextBox/TextBoxColor".visible = true 
-		$"../../Player/Camera2D/InterestLabel".visible = false
+		$"../Player/Camera2D/GoBackLabel".visible = true 
+		$"../Player/Camera2D/InterestLabel".visible = false
 
 	##Handles interactions with objects
 	if interaction_name == "PoolBookArea":
@@ -41,8 +41,8 @@ func interact():
 		if Input.is_action_just_pressed("interact"):
 			print("going to the foyer!")
 			get_tree().change_scene_to_file("res://Scenes/foyer.tscn")
-			$"../../Player".position == Vector2(806, 683) 
-			$AnimatedSprite2D.play("IdleUp")
+			##$"../Player".position == Vector2(806, 683) 
+			##$AnimatedSprite2D.play("IdleUp")
 		
 	if interaction_name == "ToParlor": 
 		if Input.is_action_just_pressed("interact"): 

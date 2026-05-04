@@ -79,13 +79,3 @@ func _on_interaction_detector_area_exited(area: Area2D):
 	nearby_interactables.erase(area) 
 	$Camera2D/InterestLabel.visible = false
 	
-
-
-func _on_living_space_to_foyer_area_entered(_area: Area2D):
-	print("we can move!") 
-	$Camera2D/InterestLabel.visible = false 
-	$Camera2D/GoBackLabel.visible = true
-	if Input.is_action_just_pressed("interact"):
-			get_tree().change_scene_to_file("res://Scenes/foyer.tscn")
-			$"../../Player".position == Vector2(806, 683) 
-			$AnimatedSprite2D.play("IdleUp")

@@ -297,6 +297,7 @@ text = "Go to the next room? "
 collision_layer = 2
 monitoring = false
 script = ExtResource("16_1t30t")
+description = "moves player from living space to foyer"
 interaction_name = "ToFoyer"
 interaction_type = "transport"
 metadata/_custom_type_script = "uid://d2tjxyv607xvn"
