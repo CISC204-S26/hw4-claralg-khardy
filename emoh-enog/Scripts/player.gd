@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -400.0
 # defines items nearby
 @export var nearby_interactables = []
 ## Will eventually hold an array 
+@export var object_ref : Node
 
 func _physics_process(_delta: float):
 	## Add the gravity.
@@ -60,8 +61,8 @@ func _physics_process(_delta: float):
 	
 	## Handles interactable ability
 	if Input.is_action_just_pressed("interact"): 
-		pass #if nearby_interactables: 
-			#nearby_interactables.back().interact() 
+		if nearby_interactables: 
+			nearby_interactables.back().interact() 
 	
 	
 ## Area entered signal connection
@@ -70,12 +71,12 @@ func _on_interaction_detector_area_entered(area: Area2D):
 	#area.set_active(true) 
 	nearby_interactables.append(area)
 	##make into an if else statement for the other labels, trying to figure out how
-	$Camera2D/InterestLabel.visible = true
+	$Camera2D/InterestLabel.show()
 
 ## Area exited signal connection 
 func _on_interaction_detector_area_exited(area: Area2D):
 	print("go away")
 	#area.set_active(false) 
 	nearby_interactables.erase(area) 
-	$Camera2D/InterestLabel.visible = false
+	$Camera2D/InterestLabel.hide()
 	

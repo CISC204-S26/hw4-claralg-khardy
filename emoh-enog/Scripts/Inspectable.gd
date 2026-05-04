@@ -7,6 +7,7 @@ class_name Inspectable extends Area2D
 @export var interaction_name = "test interaction"
 @export var interaction_type = "test"
 @export var display_active = false
+@export var object_ref : Node 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,8 +23,8 @@ func interact():
 	
 	##Handles labels and text disappearing 
 	if Input.is_action_just_pressed("interact"): 
-		$"../Player/Camera2D/GoBackLabel".visible = true 
-		$"../Player/Camera2D/InterestLabel".visible = false
+		$"../../Player/Camera2D/TextBox/TextBoxColor/Dialogue".show() 
+		$"../../Player/Camera2D/InterestLabel".hide()
 
 	##Handles interactions with objects
 	if interaction_name == "PoolBookArea":

@@ -1,0 +1,376 @@
+[gd_scene format=3 uid="uid://cjdje7h2w7khw"]
+
+[ext_resource type="Texture2D" uid="uid://bldn2lt45mk4k" path="res://Assets/Sprites/PlanksTexture.png" id="1_j74pa"]
+[ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="2_md2ii"]
+[ext_resource type="PackedScene" uid="uid://cbxuiay41iicq" path="res://Scenes/invisible_walls.tscn" id="2_yxbpt"]
+[ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="3_yxbpt"]
+[ext_resource type="PackedScene" uid="uid://xljewwfx2drq" path="res://Scenes/dresser.tscn" id="4_vggib"]
+[ext_resource type="Texture2D" uid="uid://mpt8olpcahuq" path="res://Assets/Sprites/pool_book.png" id="5_2g8os"]
+[ext_resource type="Script" uid="uid://tshyy0gapif4" path="res://Scripts/Inspectable.gd" id="8_c1wrp"]
+[ext_resource type="Texture2D" uid="uid://b1oxstfr3g30p" path="res://Assets/Sprites/ParlorLightPool.png" id="8_yxbpt"]
+[ext_resource type="Texture2D" uid="uid://udd2si1p1hvt" path="res://Assets/Sprites/ParlorLightBulb.png" id="9_2g8os"]
+[ext_resource type="Texture2D" uid="uid://djdowosbmtub" path="res://Assets/Sprites/PoolTable.png" id="9_vggib"]
+[ext_resource type="Texture2D" uid="uid://bn2ekgx2kxxm2" path="res://Assets/Sprites/JellySafe.png" id="10_2g8os"]
+[ext_resource type="Texture2D" uid="uid://bqt80aqh6v85l" path="res://Assets/Sprites/Gramaphone.png" id="12_my5pg"]
+[ext_resource type="AudioStream" uid="uid://dr11xhdw3y7c6" path="res://Assets/Audio/VinylSFX.mp3" id="13_bpacx"]
+[ext_resource type="AudioStream" uid="uid://5tu5rhlauh4d" path="res://Assets/Audio/Everybody Wants to Rule the World.mp3" id="14_ki2sl"]
+[ext_resource type="PackedScene" uid="uid://dg733nqa2uumq" path="res://Scenes/pointing_arrow.tscn" id="15_bpacx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_my5pg"]
+size = Vector2(92, 49)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hrq1f"]
+radius = 76.83171
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vggib"]
+size = Vector2(76, 45.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2g8os"]
+size = Vector2(146.5, 119)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucdog"]
+size = Vector2(147, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1wrp"]
+size = Vector2(63, 143)
+
+[node name="Parlor" type="Node2D" unique_id=1663417569]
+
+[node name="Player" parent="." unique_id=1095870449 instance=ExtResource("3_yxbpt")]
+z_index = 2
+position = Vector2(1316, 268)
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1529201488]
+
+[node name="TextBox" type="CanvasLayer" parent="Player/Camera2D" unique_id=765904596]
+layer = 3
+
+[node name="TextBoxColor" type="ColorRect" parent="Player/Camera2D/TextBox" unique_id=1239277904]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.99994
+offset_top = -205.99995
+offset_right = -10.999939
+offset_bottom = -165.99995
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.214723, 2.0121946)
+color = Color(0.32941177, 0.32941177, 0.32941177, 0.8666667)
+
+[node name="Dialogue" type="RichTextLabel" parent="Player/Camera2D/TextBox/TextBoxColor" unique_id=1533080604]
+top_level = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -206.0
+offset_right = 117.0
+offset_bottom = -125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "There's a beginner's guide to pool here..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InterestLabel" type="Label" parent="Player/Camera2D" unique_id=1033645465]
+visible = false
+show_behind_parent = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.000004
+offset_top = -56.499996
+offset_right = 144.0
+offset_bottom = -33.499996
+grow_horizontal = 2
+scale = Vector2(0.4, 0.4)
+text = "This looks interesting..."
+
+[node name="Floor" type="Node" parent="." unique_id=1696479775]
+
+[node name="PlanksTexture" type="Sprite2D" parent="Floor" unique_id=196667841]
+position = Vector2(179.5, 542)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture2" type="Sprite2D" parent="Floor" unique_id=1574226437]
+position = Vector2(524, 542)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture3" type="Sprite2D" parent="Floor" unique_id=1997396878]
+position = Vector2(869, 542)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture4" type="Sprite2D" parent="Floor" unique_id=828816321]
+position = Vector2(1226.25, 542)
+scale = Vector2(1.8475004, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture5" type="Sprite2D" parent="Floor" unique_id=1831764980]
+position = Vector2(179.5, 342)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture6" type="Sprite2D" parent="Floor" unique_id=105301852]
+position = Vector2(179.99998, 142)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture7" type="Sprite2D" parent="Floor" unique_id=2088945596]
+position = Vector2(524, 342)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture8" type="Sprite2D" parent="Floor" unique_id=1123095875]
+position = Vector2(524, 142)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture9" type="Sprite2D" parent="Floor" unique_id=1448361145]
+position = Vector2(868.99994, 342)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture10" type="Sprite2D" parent="Floor" unique_id=1277847943]
+position = Vector2(868.99994, 142)
+scale = Vector2(1.725, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture11" type="Sprite2D" parent="Floor" unique_id=1763876278]
+position = Vector2(1225.25, 342)
+scale = Vector2(1.8375, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="PlanksTexture12" type="Sprite2D" parent="Floor" unique_id=1225563610]
+position = Vector2(1224.75, 142)
+scale = Vector2(1.8325006, 1)
+texture = ExtResource("1_j74pa")
+
+[node name="Walls" type="Node" parent="." unique_id=44237785]
+
+[node name="InvisibleWalls" parent="Walls" unique_id=634904761 instance=ExtResource("2_yxbpt")]
+position = Vector2(-108, 27)
+scale = Vector2(1.4799988, 1)
+
+[node name="RectShape" parent="Walls/InvisibleWalls" index="0" unique_id=1736707689]
+position = Vector2(568, 7.5)
+
+[node name="InvisibleWalls2" parent="Walls" unique_id=1914793346 instance=ExtResource("2_yxbpt")]
+position = Vector2(-71.999985, 638)
+scale = Vector2(1.2799994, 1)
+
+[node name="RectShape" parent="Walls/InvisibleWalls2" index="0" unique_id=1736707689]
+position = Vector2(591.5, 7.5)
+
+[node name="InvisibleWalls3" parent="Walls" unique_id=580915979 instance=ExtResource("2_yxbpt")]
+position = Vector2(5, -405)
+rotation = 1.5707964
+
+[node name="RectShape" parent="Walls/InvisibleWalls3" index="0" unique_id=1736707689]
+position = Vector2(594, 7.500001)
+
+[node name="InvisibleWalls4" parent="Walls" unique_id=1681759924 instance=ExtResource("2_yxbpt")]
+position = Vector2(1429, -405)
+rotation = 1.5707964
+
+[node name="RectShape" parent="Walls/InvisibleWalls4" index="0" unique_id=1736707689]
+position = Vector2(594, 7.500001)
+
+[node name="Wallpaper" type="Sprite2D" parent="Walls" unique_id=1253146478]
+position = Vector2(108, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper2" type="Sprite2D" parent="Walls" unique_id=2068150026]
+position = Vector2(308, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper3" type="Sprite2D" parent="Walls" unique_id=301711459]
+position = Vector2(508, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper4" type="Sprite2D" parent="Walls" unique_id=2029557511]
+position = Vector2(708, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper5" type="Sprite2D" parent="Walls" unique_id=1654062524]
+position = Vector2(908, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper6" type="Sprite2D" parent="Walls" unique_id=2098065308]
+position = Vector2(1108, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper7" type="Sprite2D" parent="Walls" unique_id=1213984890]
+position = Vector2(1308, -58)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper8" type="Sprite2D" parent="Walls" unique_id=1849274071]
+position = Vector2(108, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper9" type="Sprite2D" parent="Walls" unique_id=1309920368]
+position = Vector2(308, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper10" type="Sprite2D" parent="Walls" unique_id=928393076]
+position = Vector2(508, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper11" type="Sprite2D" parent="Walls" unique_id=557896031]
+position = Vector2(708, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper12" type="Sprite2D" parent="Walls" unique_id=1080482064]
+position = Vector2(908, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper13" type="Sprite2D" parent="Walls" unique_id=1029686613]
+position = Vector2(1108, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Wallpaper14" type="Sprite2D" parent="Walls" unique_id=1183555096]
+position = Vector2(1308, -258)
+texture = ExtResource("2_md2ii")
+
+[node name="Dresser" parent="." unique_id=1444769464 instance=ExtResource("4_vggib")]
+z_index = 1
+position = Vector2(131, 56)
+scale = Vector2(1.5, 1.5)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1091592118]
+z_index = 3
+position = Vector2(718, 316)
+scale = Vector2(1.9474701, 1.3392104)
+texture = ExtResource("8_yxbpt")
+
+[node name="ParlorLightBulb" type="Sprite2D" parent="." unique_id=956139393]
+z_index = 4
+position = Vector2(732, 133)
+scale = Vector2(2, 2)
+texture = ExtResource("9_2g8os")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1513048478]
+z_index = 3
+position = Vector2(61, 527)
+
+[node name="Gramaphone" type="Sprite2D" parent="StaticBody2D" unique_id=70549316]
+z_index = 3
+texture = ExtResource("12_my5pg")
+
+[node name="VinylCrackle" type="AudioStreamPlayer2D" parent="StaticBody2D/Gramaphone" unique_id=1894127201]
+stream = ExtResource("13_bpacx")
+volume_db = -15.205
+autoplay = true
+max_distance = 720.0
+parameters/looping = true
+
+[node name="Music" type="AudioStreamPlayer2D" parent="StaticBody2D/Gramaphone" unique_id=1240433900]
+stream = ExtResource("14_ki2sl")
+autoplay = true
+max_distance = 1400.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2116734012]
+z_index = 2
+position = Vector2(1, 76.5)
+shape = SubResource("RectangleShape2D_my5pg")
+
+[node name="Interactables" type="Node" parent="." unique_id=884705693]
+
+[node name="PoolBookArea" type="Area2D" parent="Interactables" unique_id=897077010]
+position = Vector2(131, 57)
+scale = Vector2(1.5, 1.5)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+script = ExtResource("8_c1wrp")
+description = "A beginner's guide to pool... there's a chart inside..."
+has_image = true
+interaction_name = "PoolBookArea"
+interaction_type = "Inspectable"
+display_active = true
+
+[node name="CircleShape" type="CollisionShape2D" parent="Interactables/PoolBookArea" unique_id=1712313983]
+position = Vector2(-36.666668, 14.666668)
+shape = SubResource("CircleShape2D_hrq1f")
+
+[node name="PoolBook" type="Sprite2D" parent="Interactables/PoolBookArea" unique_id=1082162267]
+z_index = 2
+texture = ExtResource("5_2g8os")
+
+[node name="PoolTableArea" type="Area2D" parent="Interactables" unique_id=1364571859]
+position = Vector2(704, 277)
+scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+script = ExtResource("8_c1wrp")
+description = "Looks like this game has been waiting for some time, there's dust all over the table. There's a cluster at this corner... the green number is scratched out..."
+has_image = true
+interaction_name = "PoolTable"
+interaction_type = "Inspectable"
+display_active = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/PoolTableArea" unique_id=586831751]
+z_index = 1
+position = Vector2(-45.5, -41.25)
+shape = SubResource("RectangleShape2D_vggib")
+
+[node name="PoolTable" type="StaticBody2D" parent="Interactables/PoolTableArea" unique_id=1160665582]
+
+[node name="PoolTable" type="Sprite2D" parent="Interactables/PoolTableArea/PoolTable" unique_id=1756652897]
+z_index = 1
+texture = ExtResource("9_vggib")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/PoolTableArea/PoolTable" unique_id=2144396497]
+z_index = 1
+position = Vector2(1.75, 8.5)
+shape = SubResource("RectangleShape2D_2g8os")
+
+[node name="SafeArea" type="Area2D" parent="Interactables" unique_id=1829177941]
+visibility_layer = 2
+z_index = 1
+position = Vector2(1226, -85)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+script = ExtResource("8_c1wrp")
+description = "A safe... I don't have the combination..."
+interaction_name = "ParlorSafe"
+interaction_type = "Inspectable"
+
+[node name="JellySafe" type="Sprite2D" parent="Interactables/SafeArea" unique_id=694187072]
+z_index = 1
+texture = ExtResource("10_2g8os")
+
+[node name="SafeRect" type="CollisionShape2D" parent="Interactables/SafeArea" unique_id=1186203845]
+position = Vector2(2.5, 55)
+shape = SubResource("RectangleShape2D_ucdog")
+
+[node name="ParlorToFoyer" type="Area2D" parent="Interactables" unique_id=1565305949]
+z_index = 1
+position = Vector2(1213, 175)
+monitoring = false
+
+[node name="Doorway" type="CollisionShape2D" parent="Interactables/ParlorToFoyer" unique_id=772136289]
+position = Vector2(22.5, 55.5)
+shape = SubResource("RectangleShape2D_c1wrp")
+
+[node name="ParlorToFoyerArrow" parent="." unique_id=63671882 instance=ExtResource("15_bpacx")]
+position = Vector2(1324, 447)
+
+[editable path="Walls/InvisibleWalls"]
+[editable path="Walls/InvisibleWalls2"]
+[editable path="Walls/InvisibleWalls3"]
+[editable path="Walls/InvisibleWalls4"]
