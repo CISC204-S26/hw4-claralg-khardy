@@ -259,43 +259,5 @@ z_index = 2
 position = Vector2(532, 474)
 scale = Vector2(2, 2)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=365884575]
-
-[node name="TextBox" type="CanvasLayer" parent="Player/Camera2D" unique_id=53459356]
-layer = 3
-
-[node name="TextBoxColor" type="ColorRect" parent="Player/Camera2D/TextBox" unique_id=1672863254]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.99994
-offset_top = -205.99995
-offset_right = -10.999939
-offset_bottom = -165.99995
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4.214723, 2.0121946)
-color = Color(0.32941177, 0.32941177, 0.32941177, 0.8666667)
-
-[node name="Dialogue" type="RichTextLabel" parent="Player/Camera2D/TextBox/TextBoxColor" unique_id=370982211]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -18.813675
-offset_top = -17.515152
-offset_right = 138.18633
-offset_bottom = 52.484848
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 10
-bbcode_enabled = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="GreenhouseToFoyerArrow" parent="." unique_id=63671882 instance=ExtResource("5_4tkm1")]
 position = Vector2(599, 609)

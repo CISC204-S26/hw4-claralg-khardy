@@ -71,7 +71,8 @@ func _on_interaction_detector_area_entered(area: Area2D):
 	#area.set_active(true) 
 	nearby_interactables.append(area)
 	##make into an if else statement for the other labels, trying to figure out how
-	$Camera2D/InterestLabel.show()
+	if area is Inspectable: 
+		$Camera2D/InterestLabel.show()
 
 ## Area exited signal connection 
 func _on_interaction_detector_area_exited(area: Area2D):
@@ -79,4 +80,14 @@ func _on_interaction_detector_area_exited(area: Area2D):
 	#area.set_active(false) 
 	nearby_interactables.erase(area) 
 	$Camera2D/InterestLabel.hide()
+	
+##Handles text appearing and disappearing 
+func _on_show_dialogue(description):
+	$Camera2D/TextBox/TextBoxColor.show()
+	$Camera2D/TextBox/TextBoxColor/Dialogue.text = description
+	$Camera2D/InterestLabel.hide()
+	await get_tree().create_timer(4).timeout 
+	$Camera2D/TextBox/TextBoxColor.hide()
+	
+	
 	

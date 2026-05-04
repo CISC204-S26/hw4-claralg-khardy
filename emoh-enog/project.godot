@@ -19,6 +19,16 @@ config/icon="res://Assets/Sprites/icon.svg"
 
 global="*uid://cw6rp6nj3mpxe"
 
+[display]
+
+window/size/mode=2
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[global_group]
+
+player=""
+
 [input]
 
 walk_up={

@@ -220,78 +220,11 @@ position = Vector2(0.49998665, -0.49998665)
 scale = Vector2(0.69531274, 0.69531274)
 texture = ExtResource("13_12vfs")
 
-[node name="Player" parent="." unique_id=1095870449 instance=ExtResource("14_pyms1")]
+[node name="Player" parent="." unique_id=1095870449 groups=["player"] instance=ExtResource("14_pyms1")]
 z_index = 2
 position = Vector2(341, 295)
 scale = Vector2(2, 2)
 collision_mask = 3
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1424285856]
-
-[node name="TextBox" type="CanvasLayer" parent="Player/Camera2D" unique_id=2113427755]
-layer = 3
-
-[node name="TextBoxColor" type="ColorRect" parent="Player/Camera2D/TextBox" unique_id=1283756374]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.99994
-offset_top = -205.99995
-offset_right = -10.999939
-offset_bottom = -165.99995
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4.214723, 2.0121946)
-color = Color(0.32941177, 0.32941177, 0.32941177, 0.8666667)
-
-[node name="Dialogue" type="RichTextLabel" parent="Player/Camera2D/TextBox/TextBoxColor" unique_id=698847425]
-top_level = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -206.0
-offset_right = 117.0
-offset_bottom = -125.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 10
-bbcode_enabled = true
-text = "There's a beginner's guide to pool here..."
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="InterestLabel" type="Label" parent="Player/Camera2D" unique_id=1472060867]
-visible = false
-show_behind_parent = true
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -34.000004
-offset_top = -56.499996
-offset_right = 144.0
-offset_bottom = -33.499996
-grow_horizontal = 2
-scale = Vector2(0.4, 0.4)
-text = "This looks interesting..."
-
-[node name="GoBackLabel" type="Label" parent="Player/Camera2D" unique_id=1273227417]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Go back? "
-
-[node name="GoNextLabel" type="Label" parent="Player/Camera2D" unique_id=1281346302]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Go to the next room? "
 
 [node name="LivingSpaceToFoyer" type="Area2D" parent="." unique_id=565561718]
 collision_layer = 2

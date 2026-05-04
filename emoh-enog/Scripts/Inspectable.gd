@@ -2,6 +2,7 @@ class_name Inspectable extends Area2D
 
 @export var description = ""
 @export var has_image = false
+signal show_dialogue(text:String)
 
 ## Collision Layer 2 is Interactables :3 -Clara
 @export var interaction_name = "test interaction"
@@ -23,13 +24,13 @@ func interact():
 	
 	##Handles labels and text disappearing 
 	if Input.is_action_just_pressed("interact"): 
-		$"../../Player/Camera2D/TextBox/TextBoxColor/Dialogue".show() 
-		$"../../Player/Camera2D/InterestLabel".hide()
+		pass #$"../../Player/Camera2D/TextBox/TextBoxColor/Dialogue".show() 
+		#$"../../Player/Camera2D/InterestLabel".hide()
 
 	##Handles interactions with objects
 	if interaction_name == "PoolBookArea":
 		print("a pool book!")
-		$"../../Player/Camera2D/TextBox/TextBoxColor/Dialogue".text = "There's a beginner's guide to pool here..."
+		show_dialogue.emit (description)
 	
 	if interaction_name == "EvilPlant":
 		$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = "It tried to bite me..."
@@ -42,8 +43,6 @@ func interact():
 		if Input.is_action_just_pressed("interact"):
 			print("going to the foyer!")
 			get_tree().change_scene_to_file("res://Scenes/foyer.tscn")
-			##$"../Player".position == Vector2(806, 683) 
-			##$AnimatedSprite2D.play("IdleUp")
 		
 	if interaction_name == "ToParlor": 
 		if Input.is_action_just_pressed("interact"): 
@@ -67,9 +66,7 @@ func interact():
 	##Place key under rug in living space, add arrow to lampshade when turned on to point to key. 
 	##Make large picture by the bed an indicator to turn on the lamp. Bookshelf is a red herring. 
 	
-	##Handles text disappearing after interactions
-	await get_tree().create_timer(4).timeout
-	$"../../Player/Camera2D/TextBox".visible = false
+
 	
 	
 	

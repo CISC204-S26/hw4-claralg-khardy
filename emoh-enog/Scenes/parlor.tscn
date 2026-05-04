@@ -41,61 +41,6 @@ z_index = 2
 position = Vector2(1316, 268)
 scale = Vector2(2, 2)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1529201488]
-
-[node name="TextBox" type="CanvasLayer" parent="Player/Camera2D" unique_id=765904596]
-layer = 3
-
-[node name="TextBoxColor" type="ColorRect" parent="Player/Camera2D/TextBox" unique_id=1239277904]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.99994
-offset_top = -205.99995
-offset_right = -10.999939
-offset_bottom = -165.99995
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4.214723, 2.0121946)
-color = Color(0.32941177, 0.32941177, 0.32941177, 0.8666667)
-
-[node name="Dialogue" type="RichTextLabel" parent="Player/Camera2D/TextBox/TextBoxColor" unique_id=1533080604]
-top_level = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -206.0
-offset_right = 117.0
-offset_bottom = -125.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 10
-bbcode_enabled = true
-text = "There's a beginner's guide to pool here..."
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="InterestLabel" type="Label" parent="Player/Camera2D" unique_id=1033645465]
-visible = false
-show_behind_parent = true
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -34.000004
-offset_top = -56.499996
-offset_right = 144.0
-offset_bottom = -33.499996
-grow_horizontal = 2
-scale = Vector2(0.4, 0.4)
-text = "This looks interesting..."
-
 [node name="Floor" type="Node" parent="." unique_id=1696479775]
 
 [node name="PlanksTexture" type="Sprite2D" parent="Floor" unique_id=196667841]
@@ -369,6 +314,8 @@ shape = SubResource("RectangleShape2D_c1wrp")
 
 [node name="ParlorToFoyerArrow" parent="." unique_id=63671882 instance=ExtResource("15_bpacx")]
 position = Vector2(1324, 447)
+
+[connection signal="show_dialogue" from="Interactables/PoolBookArea" to="Player" method="_on_show_dialogue"]
 
 [editable path="Walls/InvisibleWalls"]
 [editable path="Walls/InvisibleWalls2"]
