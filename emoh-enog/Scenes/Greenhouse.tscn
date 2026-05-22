@@ -259,6 +259,7 @@ position = Vector2(614, 0)
 texture = ExtResource("4_88u8o")
 
 [node name="Area2D" type="Area2D" parent="Plants/EvilPlant" unique_id=128584316]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/EvilPlant/Area2D" unique_id=302260560]
 position = Vector2(-2, 16)
@@ -271,6 +272,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("5_8xgxa")
 
 [node name="Area2D" type="Area2D" parent="Plants/plant1" unique_id=1677924251]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant1/Area2D" unique_id=1313240834]
 scale = Vector2(2.5, 2.5)
@@ -295,6 +297,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("8_ko7f4")
 
 [node name="Area2D" type="Area2D" parent="Plants/plant4" unique_id=511805864]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant4/Area2D" unique_id=1732905991]
 scale = Vector2(2.5, 2.5)
@@ -307,6 +310,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("9_gbaaa")
 
 [node name="Area2D" type="Area2D" parent="Plants/plant5" unique_id=1286356263]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant5/Area2D" unique_id=1605320728]
 scale = Vector2(2.5, 2.5)
@@ -331,6 +335,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("12_3483s")
 
 [node name="Area2D" type="Area2D" parent="Plants/plant8" unique_id=29313799]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant8/Area2D" unique_id=1037230110]
 scale = Vector2(2.5, 2.5)
@@ -343,6 +348,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("13_8i8lg")
 
 [node name="Area2D" type="Area2D" parent="Plants/plant9" unique_id=1145039400]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant9/Area2D" unique_id=311232839]
 scale = Vector2(2.5, 2.5)
@@ -367,6 +373,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("16_3ijhc")
 
 [node name="Area2D" type="Area2D" parent="Plants/plant12" unique_id=721847228]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant12/Area2D" unique_id=1515878764]
 scale = Vector2(2.5, 2.5)

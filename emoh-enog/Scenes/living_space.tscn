@@ -167,6 +167,7 @@ scale = Vector2(1.66, 1.66)
 texture = ExtResource("6_313kx")
 
 [node name="Area2D" type="Area2D" parent="Furniture/Lamp" unique_id=226113239]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Lamp/Area2D" unique_id=1863260429]
 position = Vector2(0, 62.048187)
@@ -179,6 +180,7 @@ scale = Vector2(3.46, 3.46)
 texture = ExtResource("7_pyms1")
 
 [node name="Area2D" type="Area2D" parent="Furniture/Bookshelf" unique_id=719492602]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Bookshelf/Area2D" unique_id=1059476970]
 position = Vector2(0.8670502, 5.2023125)
@@ -190,6 +192,7 @@ scale = Vector2(3.69, 3.69)
 texture = ExtResource("8_bv5ku")
 
 [node name="Area2D" type="Area2D" parent="Furniture/Rug" unique_id=1752632915]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Rug/Area2D" unique_id=1042391496]
 position = Vector2(-2.4390244, -4.0650406)
@@ -229,6 +232,7 @@ scale = Vector2(0.77, 0.77)
 texture = ExtResource("12_1t30t")
 
 [node name="Area2D" type="Area2D" parent="Pictures/Frame3" unique_id=1731459331]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pictures/Frame3/Area2D" unique_id=938061407]
 position = Vector2(1.6949158, 122.88136)
