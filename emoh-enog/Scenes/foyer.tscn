@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://cju0fxbbhmidr" path="res://Assets/Sprites/Wallpaper.png" id="2_u7b4r"]
 [ext_resource type="PackedScene" uid="uid://dg733nqa2uumq" path="res://Scenes/pointing_arrow.tscn" id="5_60nir"]
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="6_7bfhw"]
+[ext_resource type="Script" uid="uid://b0pmeunp0774s" path="res://Scripts/Transition.gd" id="6_sassq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kf6m2"]
+size = Vector2(40, 63.5)
 
 [node name="Foyer" type="Node2D" unique_id=971780771]
 
@@ -196,16 +200,50 @@ texture = ExtResource("2_u7b4r")
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1982373421]
 position = Vector2(418, 339)
 
-[node name="FoyerToParlorArrow" parent="." unique_id=63671882 instance=ExtResource("5_60nir")]
-position = Vector2(309, 321)
-
-[node name="FoyerToGreenhouseArrow" parent="." unique_id=1013999142 instance=ExtResource("5_60nir")]
-position = Vector2(793, 112)
-
-[node name="FoyerToLivingSpaceArrow" parent="." unique_id=1084766483 instance=ExtResource("5_60nir")]
-position = Vector2(1317, 316)
-
 [node name="Player" parent="." unique_id=1095870449 instance=ExtResource("6_7bfhw")]
 z_index = 2
 position = Vector2(806, 683)
 scale = Vector2(2, 2)
+
+[node name="ToParlorArea" type="Area2D" parent="." unique_id=999715163]
+position = Vector2(309, 321)
+rotation = -1.5707964
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("6_sassq")
+interaction_type = "Transition"
+
+[node name="ToParlorArrow" parent="ToParlorArea" unique_id=63671882 instance=ExtResource("5_60nir")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToParlorArea" unique_id=1723581122]
+shape = SubResource("RectangleShape2D_kf6m2")
+
+[node name="ToGreenhouseArea" type="Area2D" parent="." unique_id=1107893861]
+position = Vector2(793, 112)
+rotation = -1.5707964
+collision_layer = 2
+script = ExtResource("6_sassq")
+interaction_type = "Transition"
+
+[node name="ToGreenhouseArrow" parent="ToGreenhouseArea" unique_id=1013999142 instance=ExtResource("5_60nir")]
+position = Vector2(-1.5258789e-05, 0)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToGreenhouseArea" unique_id=1821762456]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_kf6m2")
+
+[node name="ToLivingSpaceArea" type="Area2D" parent="." unique_id=791387377]
+position = Vector2(1318, 316)
+rotation = -1.5707964
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("6_sassq")
+interaction_type = "Transition"
+
+[node name="ToLivingSpaceArrow" parent="ToLivingSpaceArea" unique_id=1084766483 instance=ExtResource("5_60nir")]
+position = Vector2(-3.0517578e-05, 0)
+rotation = -3.1415925
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToLivingSpaceArea" unique_id=1236035720]
+shape = SubResource("RectangleShape2D_kf6m2")

@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -400.0
 
 # defines items nearby
 @export var nearby_interactables = []
+@export var nearby_transitions = []
+@export var Inventory = []
 ## Will eventually hold an array 
 @export var object_ref : Node
 
