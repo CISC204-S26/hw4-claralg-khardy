@@ -18,6 +18,19 @@
 [ext_resource type="PackedScene" uid="uid://dg733nqa2uumq" path="res://Scenes/pointing_arrow.tscn" id="15_bv5ku"]
 [ext_resource type="Script" uid="uid://tshyy0gapif4" path="res://Scripts/Inspectable.gd" id="16_1t30t"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqgka"]
+size = Vector2(72.289215, 221.68678)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12vfs"]
+size = Vector2(62.427742, 110.982666)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1t30t"]
+radius = 13.279129
+height = 69.9187
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ksogy"]
+size = Vector2(135.5932, 352.5424)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t30t"]
 
 [node name="Living space" type="Node2D" unique_id=267068913]
@@ -157,15 +170,35 @@ position = Vector2(968.00006, -167)
 scale = Vector2(1.66, 1.66)
 texture = ExtResource("6_313kx")
 
+[node name="Area2D" type="Area2D" parent="Furniture/Lamp" unique_id=220660276]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Lamp/Area2D" unique_id=796385841]
+position = Vector2(-2.409668, 62.048187)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_qqgka")
+
 [node name="Bookshelf" type="Sprite2D" parent="Furniture" unique_id=449024628]
 position = Vector2(789, -114)
 scale = Vector2(3.46, 3.46)
 texture = ExtResource("7_pyms1")
 
+[node name="Area2D" type="Area2D" parent="Furniture/Bookshelf" unique_id=1843771791]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Bookshelf/Area2D" unique_id=1426683002]
+position = Vector2(-0.28901672, 5.2023125)
+shape = SubResource("RectangleShape2D_12vfs")
+
 [node name="Rug" type="Sprite2D" parent="Furniture" unique_id=564591886]
 position = Vector2(385, 223)
 scale = Vector2(3.69, 3.69)
 texture = ExtResource("8_bv5ku")
+
+[node name="Area2D" type="Area2D" parent="Furniture/Rug" unique_id=1817109961]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Rug/Area2D" unique_id=1267714690]
+position = Vector2(-0.2710027, -1.8970189)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_1t30t")
 
 [node name="Pictures" type="Node" parent="." unique_id=700238335]
 
@@ -198,6 +231,12 @@ texture = ExtResource("9_bymhj")
 show_behind_parent = true
 scale = Vector2(0.77, 0.77)
 texture = ExtResource("12_1t30t")
+
+[node name="Area2D" type="Area2D" parent="Pictures/Frame3" unique_id=1972307008]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pictures/Frame3/Area2D" unique_id=238550562]
+position = Vector2(15.254242, 122.88136)
+shape = SubResource("RectangleShape2D_ksogy")
 
 [node name="Frame4" type="Sprite2D" parent="Pictures" unique_id=616492226]
 position = Vector2(384, -252)
