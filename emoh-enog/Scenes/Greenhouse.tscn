@@ -227,6 +227,10 @@ position = Vector2(961, 107)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("3_b71cq")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Table1" unique_id=1941385296]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Table1/StaticBody2D" unique_id=582422181]
+
 [node name="Table2" type="Sprite2D" parent="Furniture" unique_id=2106224003]
 position = Vector2(292, 107)
 scale = Vector2(1.5, 1.5)
