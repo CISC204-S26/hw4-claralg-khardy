@@ -6,7 +6,7 @@ signal show_dialogue(text:String)
 
 ## Collision Layer 2 is Interactables :3 -Clara
 @export var interaction_name = "test interaction"
-@export var interaction_type = "test"
+@export var interaction_type = "Inspectable"
 @export var display_active = false
 @export var object_ref : Node 
 
@@ -38,30 +38,7 @@ func interact():
 	#if interaction_name == "": 
 		#$Player/Camera2D/TextBox/TextBoxColor/Dialogue.text = ""
 		
-	##Handles taking player from place to place
-	if interaction_name == "ToFoyer":
-		if Input.is_action_just_pressed("interact"):
-			print("going to the foyer!")
-			get_tree().change_scene_to_file("res://Scenes/foyer.tscn")
-		
-	if interaction_name == "ToParlor": 
-		if Input.is_action_just_pressed("interact"): 
-			print("going to the parlor!")
-			get_tree().change_scene_to_file("res://Scenes/parlor.tscn")
-			#insert player position here
 	
-	if interaction_name == "ToLivingSpace": 
-		if Input.is_action_just_pressed("interact"): 
-			print("going to the living space!")
-			get_tree().change_scene_to_file("res://Scenes/living_space.tscn")
-			#insert player position here
-	
-	if interaction_name == "ToGreenhouse": 
-		if Input.is_action_just_pressed("interact"): 
-			print("going to the greenhouse!")
-			get_tree().change_scene_to_file("res://Scenes/Greenhouse.tscn")
-			#insert player position here 
-
 	
 	##Place key under rug in living space, add arrow to lampshade when turned on to point to key. 
 	##Make large picture by the bed an indicator to turn on the lamp. Bookshelf is a red herring. 

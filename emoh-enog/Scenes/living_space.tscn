@@ -15,10 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://bbto02f8skxv1" path="res://Assets/Sprites/LossPicture.png" id="12_qqgka"]
 [ext_resource type="Texture2D" uid="uid://b4fw3huy0t67g" path="res://Assets/Sprites/icon.svg" id="13_12vfs"]
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="14_pyms1"]
-[ext_resource type="PackedScene" uid="uid://dg733nqa2uumq" path="res://Scenes/pointing_arrow.tscn" id="15_bv5ku"]
-[ext_resource type="Script" uid="uid://tshyy0gapif4" path="res://Scripts/Inspectable.gd" id="16_1t30t"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1t30t"]
 
 [node name="Living space" type="Node2D" unique_id=267068913]
 
@@ -225,23 +221,3 @@ z_index = 2
 position = Vector2(341, 295)
 scale = Vector2(2, 2)
 collision_mask = 3
-
-[node name="LivingSpaceToFoyer" type="Area2D" parent="." unique_id=565561718]
-collision_layer = 2
-monitoring = false
-script = ExtResource("16_1t30t")
-description = "moves player from living space to foyer"
-interaction_name = "ToFoyer"
-interaction_type = "transport"
-metadata/_custom_type_script = "uid://d2tjxyv607xvn"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LivingSpaceToFoyer" unique_id=311396291]
-top_level = true
-position = Vector2(74, 271)
-scale = Vector2(4, 4)
-shape = SubResource("RectangleShape2D_1t30t")
-
-[node name="LivingSpaceToFoyerArrow" parent="LivingSpaceToFoyer" unique_id=63671882 instance=ExtResource("15_bv5ku")]
-position = Vector2(74, 271)
-
-[connection signal="area_entered" from="LivingSpaceToFoyer" to="Player" method="_on_living_space_to_foyer_area_entered"]
