@@ -161,15 +161,21 @@ z_index = 1
 position = Vector2(124, 56)
 scale = Vector2(1.5, 1.5)
 
-[node name="PoolBook" type="Sprite2D" parent="." unique_id=80242623]
-z_index = 1
+[node name="PoolBookArea" type="Area2D" parent="." unique_id=62818952]
 position = Vector2(124, 57)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("5_s3gua")
-
-[node name="PoolBookArea" type="Area2D" parent="PoolBook" unique_id=62818952]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("6_upvbo")
+has_image = true
+interaction_name = "PoolBookArea"
+interaction_type = "Inspectable"
+display_active = true
 
-[node name="CircleShape" type="CollisionShape2D" parent="PoolBook/PoolBookArea" unique_id=157756205]
+[node name="CircleShape" type="CollisionShape2D" parent="PoolBookArea" unique_id=157756205]
 position = Vector2(-36.666668, 14.666668)
 shape = SubResource("CircleShape2D_upvbo")
+
+[node name="PoolBook" type="Sprite2D" parent="PoolBookArea" unique_id=80242623]
+z_index = 1
+texture = ExtResource("5_s3gua")
