@@ -7,6 +7,33 @@
 [ext_resource type="PackedScene" uid="uid://dg6yt8jbjqcba" path="res://Scenes/player.tscn" id="4_4tkm1"]
 [ext_resource type="Texture2D" uid="uid://cvsvy74q52xkg" path="res://Assets/Sprites/EvilPlant.png" id="4_88u8o"]
 [ext_resource type="PackedScene" uid="uid://dg733nqa2uumq" path="res://Scenes/pointing_arrow.tscn" id="5_4tkm1"]
+[ext_resource type="Texture2D" uid="uid://cp88fakxv3qep" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 1/Flower Pot 1 - RED.png" id="5_88u8o"]
+[ext_resource type="Texture2D" uid="uid://boawqkfjkep34" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 5/Flower Pot 5 - RED.png" id="6_7d6au"]
+[ext_resource type="Texture2D" uid="uid://b8kpwlpx6y0wc" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 5/Flower Pot 5 - COLORFUL.png" id="7_i52j1"]
+[ext_resource type="Texture2D" uid="uid://bscmky3wo4m1c" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 2/Flower Pot 2 - PURPLE.png" id="8_i52j1"]
+[ext_resource type="Texture2D" uid="uid://cfwd65exn40i8" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 3/Flower Pot 3 - RED.png" id="9_iuhxe"]
+[ext_resource type="Texture2D" uid="uid://cxysi1np8sftw" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 2/Flower Pot 2 - RED.png" id="10_ixm7c"]
+[ext_resource type="Texture2D" uid="uid://km6cjss3q4vi" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 6/Flower Pot 6 - PURPLE.png" id="11_4rwoe"]
+[ext_resource type="Texture2D" uid="uid://bqhiifdnrt5cn" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 7/Flower Pot 7 - COLORFUL.png" id="12_g0o4r"]
+[ext_resource type="Texture2D" uid="uid://jlsul7458dep" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 4/Flower Pot 4 - COLORFUL.png" id="13_h3mgp"]
+[ext_resource type="Texture2D" uid="uid://drxiryue7gl6j" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 1/Flower Pot 1 - BLUE.png" id="14_0bro7"]
+[ext_resource type="Texture2D" uid="uid://bk6gg4fnl7llq" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 6/Flower Pot 6 - RED.png" id="15_6xwwm"]
+[ext_resource type="Texture2D" uid="uid://cqs65th2t20mp" path="res://Assets/Sprites/plant assets karsiori/Flower Pot 3/Flower Pot 3 - COLORFUL.png" id="16_dfobr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3blx6"]
+size = Vector2(128, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfobr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xgxa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsseu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8df8e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ko7f4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbaaa"]
 
 [node name="Greenhouse" type="Node2D" unique_id=790778910]
 
@@ -237,6 +264,120 @@ texture = ExtResource("3_b71cq")
 [node name="EvilPlant" type="Sprite2D" parent="Plants" unique_id=2117559764]
 position = Vector2(614, 0)
 texture = ExtResource("4_88u8o")
+
+[node name="Area2D" type="Area2D" parent="Plants/EvilPlant" unique_id=316392420]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/EvilPlant/Area2D" unique_id=517447842]
+position = Vector2(2, 8)
+shape = SubResource("RectangleShape2D_3blx6")
+
+[node name="plant1" type="Sprite2D" parent="Plants" unique_id=2138627882]
+texture_filter = 1
+position = Vector2(240, 40)
+scale = Vector2(2, 2)
+texture = ExtResource("5_88u8o")
+
+[node name="Area2D" type="Area2D" parent="Plants/plant1" unique_id=965339265]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant1/Area2D" unique_id=790929495]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_dfobr")
+
+[node name="plant2" type="Sprite2D" parent="Plants" unique_id=135094733]
+texture_filter = 1
+position = Vector2(352, 32)
+scale = Vector2(2, 2)
+texture = ExtResource("6_7d6au")
+
+[node name="plant3" type="Sprite2D" parent="Plants" unique_id=1509882785]
+texture_filter = 1
+position = Vector2(248, 272)
+scale = Vector2(2, 2)
+texture = ExtResource("7_i52j1")
+
+[node name="plant4" type="Sprite2D" parent="Plants" unique_id=73290291]
+texture_filter = 1
+position = Vector2(344, 280)
+scale = Vector2(2, 2)
+texture = ExtResource("8_i52j1")
+
+[node name="Area2D" type="Area2D" parent="Plants/plant4" unique_id=895698747]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant4/Area2D" unique_id=477256127]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_8xgxa")
+
+[node name="plant5" type="Sprite2D" parent="Plants" unique_id=2111271241]
+texture_filter = 1
+position = Vector2(232, 520)
+scale = Vector2(2, 2)
+texture = ExtResource("9_iuhxe")
+
+[node name="Area2D" type="Area2D" parent="Plants/plant5" unique_id=295229777]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant5/Area2D" unique_id=159263028]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_dsseu")
+
+[node name="plant6" type="Sprite2D" parent="Plants" unique_id=1957094797]
+texture_filter = 1
+position = Vector2(336, 520)
+scale = Vector2(2, 2)
+texture = ExtResource("10_ixm7c")
+
+[node name="plant7" type="Sprite2D" parent="Plants" unique_id=1127109430]
+texture_filter = 1
+position = Vector2(912, 32)
+scale = Vector2(2, 2)
+texture = ExtResource("11_4rwoe")
+
+[node name="plant8" type="Sprite2D" parent="Plants" unique_id=1620431866]
+texture_filter = 1
+position = Vector2(1008, 40)
+scale = Vector2(2, 2)
+texture = ExtResource("12_g0o4r")
+
+[node name="Area2D" type="Area2D" parent="Plants/plant8" unique_id=62090360]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant8/Area2D" unique_id=1879659342]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_8df8e")
+
+[node name="plant9" type="Sprite2D" parent="Plants" unique_id=287128383]
+texture_filter = 1
+position = Vector2(912, 280)
+scale = Vector2(2, 2)
+texture = ExtResource("13_h3mgp")
+
+[node name="Area2D" type="Area2D" parent="Plants/plant9" unique_id=751059711]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant9/Area2D" unique_id=1357483786]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_ko7f4")
+
+[node name="plant10" type="Sprite2D" parent="Plants" unique_id=1617613941]
+texture_filter = 1
+position = Vector2(1000, 280)
+scale = Vector2(2, 2)
+texture = ExtResource("14_0bro7")
+
+[node name="plant11" type="Sprite2D" parent="Plants" unique_id=809467903]
+texture_filter = 1
+position = Vector2(912, 520)
+scale = Vector2(2, 2)
+texture = ExtResource("15_6xwwm")
+
+[node name="plant12" type="Sprite2D" parent="Plants" unique_id=1642819627]
+texture_filter = 1
+position = Vector2(1001, 520)
+scale = Vector2(2, 2)
+texture = ExtResource("16_dfobr")
+
+[node name="Area2D" type="Area2D" parent="Plants/plant12" unique_id=2071400549]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plants/plant12/Area2D" unique_id=410588458]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_gbaaa")
 
 [node name="InvisibleWalls" type="Node" parent="." unique_id=91601308]
 
